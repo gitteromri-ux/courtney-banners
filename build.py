@@ -73,16 +73,16 @@ def render_banner(b, size_key, w, h, idx):
                '9x16': int(150 * s), '191x1': int(36 * s)}[size_key]
 
     if size_key == '191x1':
-        h1_size = int(72 * s)
+        h1_size = int(58 * s)
         text_width = int(w * 0.56)
     elif size_key == '1x1':
-        h1_size = int(88 * s)
+        h1_size = int(72 * s)
         text_width = int(w * 0.66)
     elif size_key == '4x5':
-        h1_size = int(92 * s)
+        h1_size = int(78 * s)
         text_width = int(w * 0.70)
     else:  # 9x16
-        h1_size = int(96 * s)
+        h1_size = int(84 * s)
         text_width = w - side_pad * 2
 
     cred_size = max(16, int(h1_size * 0.25))
@@ -95,17 +95,18 @@ def render_banner(b, size_key, w, h, idx):
     # 9x16: keep CTA/trust above IG Stories bottom UI (~20% of 1920 = 384px -> use 300 scaled)
     text_bottom = {'1x1': int(64 * s), '4x5': int(80 * s),
                    '9x16': int(260 * s), '191x1': int(48 * s)}[size_key]
-    offer_size = max(14, int(h1_size * 0.20))
+    offer_size = max(14, int(h1_size * 0.22))
+    fact_size = max(15, int(h1_size * 0.26))
 
     if mode == 'side':
         vignette = ("background:"
-                    "linear-gradient(97deg, rgba(6,11,32,.97) 0%, rgba(7,13,36,.88) 26%, "
-                    "rgba(8,14,38,.46) 48%, rgba(8,14,38,0) 66%),"
-                    "linear-gradient(180deg, rgba(6,11,32,.72) 0%, rgba(6,11,32,0) 22%),"
-                    "linear-gradient(180deg, rgba(6,11,32,0) 55%, rgba(6,11,32,.6) 100%);")
+                    "linear-gradient(97deg, rgba(6,11,32,.99) 0%, rgba(7,13,36,.95) 30%, "
+                    "rgba(8,14,38,.62) 52%, rgba(8,14,38,.12) 72%, rgba(8,14,38,0) 84%),"
+                    "linear-gradient(180deg, rgba(6,11,32,.8) 0%, rgba(6,11,32,0) 24%),"
+                    "linear-gradient(180deg, rgba(6,11,32,0) 50%, rgba(6,11,32,.7) 100%);")
     else:
-        vignette = ("background:linear-gradient(180deg, rgba(6,11,32,.78) 0%, rgba(6,11,32,.1) 20%, "
-                    "rgba(6,11,32,0) 32%, rgba(7,12,34,.45) 52%, rgba(6,11,32,.9) 72%, rgba(5,9,28,.98) 100%);")
+        vignette = ("background:linear-gradient(180deg, rgba(6,11,32,.85) 0%, rgba(6,11,32,.18) 20%, "
+                    "rgba(6,11,32,.05) 30%, rgba(7,12,34,.55) 50%, rgba(6,11,32,.94) 70%, rgba(5,9,28,.99) 100%);")
 
     l1 = html.escape(b['l1'])
     l2 = html.escape(b['l2'])
@@ -129,6 +130,9 @@ def render_banner(b, size_key, w, h, idx):
   .cred{{margin-top:{max(22, int(h1_size * 0.27))}px;font-family:'EB Garamond',serif;font-style:italic;font-weight:500;font-size:{cred_size}px;color:rgba(232,241,252,.9);line-height:1.4;}}
   .cred .name{{font-style:normal;font-weight:700;color:#9cc3ef;}}
   .offer{{margin-top:{max(10, int(h1_size * 0.13))}px;font-family:'Inter',sans-serif;font-weight:500;font-size:{offer_size}px;color:rgba(245,248,252,.95);letter-spacing:.01em;}}
+  .facts{{margin-top:{max(16, int(h1_size * 0.24))}px;display:flex;flex-direction:column;gap:{max(9, int(fact_size * 0.52))}px;}}
+  .facts .f{{display:flex;align-items:baseline;gap:{max(9, int(fact_size * 0.5))}px;font-family:'Inter',sans-serif;font-weight:500;font-size:{fact_size}px;color:rgba(236,244,253,.95);line-height:1.3;}}
+  .facts .f .ck{{color:#59d3c8;font-weight:700;font-size:{int(fact_size * 0.95)}px;}}
   .actions{{margin-top:{max(30, int(h1_size * 0.40))}px;display:flex;flex-direction:column;align-items:flex-start;gap:{max(18, int(cta_size * 0.9))}px;}}
   .cta{{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(20,34,72,.92) 0%,rgba(10,18,46,.94) 100%);color:#ffffff;font-family:'Inter',sans-serif;font-weight:600;font-size:{cta_size}px;letter-spacing:.16em;padding:{cta_pad_v}px {cta_pad_h}px;border-radius:9999px;border:2px solid rgba(158,196,242,.95);box-shadow:0 0 26px rgba(110,160,235,.5), 0 10px 34px rgba(2,6,20,.55), inset 0 0 18px rgba(110,160,235,.18);}}
   .tp{{display:flex;align-items:center;gap:{max(10, int(tp_star_h * 0.5))}px;}}
@@ -145,7 +149,12 @@ def render_banner(b, size_key, w, h, idx):
   <div class="text">
     <h1 class="h1">{l1}<span class="b">{l2}</span></h1>
     <div class="cred">Taught live by <span class="name">Courtney</span>, Longevity Life Academy Instructor</div>
-    <div class="offer">Enrollment now open</div>
+    <div class="facts">
+      <div class="f"><span class="ck">✓</span><span>18 live sessions over 18 weeks, in cohorts of 8 to 15</span></div>
+      <div class="f"><span class="ck">✓</span><span>The Six Pillars: nutrition, sleep, movement and more</span></div>
+      <div class="f"><span class="ck">✓</span><span>Finish with your written personal longevity protocol</span></div>
+    </div>
+    <div class="offer">Applications open for the next cohort</div>
     <div class="actions">
       <a class="cta">ENROLL NOW</a>
       <div class="tp">
