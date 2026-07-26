@@ -28,6 +28,10 @@ SIZES = [
 LUX_V1 = 'assets/composites/courtney_lux_v1.png'  # 3:4 portrait, turtleneck
 LUX_V2 = 'assets/composites/courtney_lux_v2.png'  # 16:9 subject right
 LUX_V3 = 'assets/composites/courtney_lux_v3.png'  # 9:16 vertical
+WIDE_LS = 'assets/composites/courtney_wideset_v1.png'  # 16:9 wide library, subject right
+WIDE_PT = 'assets/composites/courtney_wideset_v2.png'  # 9:16 wide library, subject center
+WIDE_SQ = 'assets/composites/courtney_wideset_1x1.png'  # 1:1 wide library, subject right
+WIDE_45 = 'assets/composites/courtney_wideset_4x5.png'  # 3:4 wide library, subject right
 
 BANNERS = [
     {'id': 'c_b1', 'title': 'Live Longer. Learn How.',
@@ -51,13 +55,21 @@ def render_banner(b, size_key, w, h, idx):
     #  'bottom' — subject high (vertical plate), copy low            (9x16)
     mode = 'bottom' if size_key == '9x16' else 'side'
 
-    if mode == 'side':
-        photo = LUX_V2
-        # push subject right in frame; window math tuned per aspect
-        op = {'1x1': '58% 32%', '4x5': '58% 25%', '191x1': '72% 38%'}[size_key]
-    else:
-        photo = LUX_V3 if idx % 2 == 0 else LUX_V1
-        op = 'center 20%' if photo == LUX_V3 else 'center 24%'
+    # Per-aspect wide-set composite so the wooden library fills the frame and Courtney sits small in it.
+    fit = 'cover'
+    if size_key == '1x1':
+        photo = WIDE_SQ
+        op = 'center center'
+    elif size_key == '4x5':
+        photo = WIDE_45
+        # push subject right so the left third stays open for copy
+        op = '72% center'
+    elif size_key == '191x1':
+        photo = WIDE_LS
+        op = 'center 45%'
+    else:  # 9x16
+        photo = WIDE_PT
+        op = 'center 30%'
 
     s = min(w, h) / 1000.0
     if w / h > 1.4:
@@ -73,16 +85,16 @@ def render_banner(b, size_key, w, h, idx):
                '9x16': int(150 * s), '191x1': int(36 * s)}[size_key]
 
     if size_key == '191x1':
-        h1_size = int(58 * s)
-        text_width = int(w * 0.56)
+        h1_size = int(52 * s)
+        text_width = int(w * 0.50)
     elif size_key == '1x1':
-        h1_size = int(72 * s)
-        text_width = int(w * 0.66)
+        h1_size = int(64 * s)
+        text_width = int(w * 0.54)
     elif size_key == '4x5':
-        h1_size = int(78 * s)
-        text_width = int(w * 0.70)
+        h1_size = int(66 * s)
+        text_width = int(w * 0.54)
     else:  # 9x16
-        h1_size = int(84 * s)
+        h1_size = int(82 * s)
         text_width = w - side_pad * 2
 
     cred_size = max(16, int(h1_size * 0.25))
@@ -98,15 +110,17 @@ def render_banner(b, size_key, w, h, idx):
     offer_size = max(14, int(h1_size * 0.22))
     fact_size = max(15, int(h1_size * 0.26))
 
+    # Lighter, moodier vignette so the wooden library set stays visible.
+    # Left side gets a soft dark scrim behind text; top and bottom get gentle fades for logo/CTA legibility.
     if mode == 'side':
         vignette = ("background:"
-                    "linear-gradient(97deg, rgba(6,11,32,.99) 0%, rgba(7,13,36,.95) 30%, "
-                    "rgba(8,14,38,.62) 52%, rgba(8,14,38,.12) 72%, rgba(8,14,38,0) 84%),"
-                    "linear-gradient(180deg, rgba(6,11,32,.8) 0%, rgba(6,11,32,0) 24%),"
-                    "linear-gradient(180deg, rgba(6,11,32,0) 50%, rgba(6,11,32,.7) 100%);")
+                    "linear-gradient(97deg, rgba(6,11,26,.92) 0%, rgba(8,14,30,.78) 22%, "
+                    "rgba(10,16,32,.42) 40%, rgba(12,18,32,.10) 56%, rgba(12,18,32,0) 66%),"
+                    "linear-gradient(180deg, rgba(6,11,26,.68) 0%, rgba(6,11,26,0) 20%),"
+                    "linear-gradient(180deg, rgba(6,11,26,0) 55%, rgba(6,11,26,.62) 100%);")
     else:
-        vignette = ("background:linear-gradient(180deg, rgba(6,11,32,.85) 0%, rgba(6,11,32,.18) 20%, "
-                    "rgba(6,11,32,.05) 30%, rgba(7,12,34,.55) 50%, rgba(6,11,32,.94) 70%, rgba(5,9,28,.99) 100%);")
+        vignette = ("background:linear-gradient(180deg, rgba(6,11,26,.68) 0%, rgba(6,11,26,.15) 18%, "
+                    "rgba(6,11,26,0) 30%, rgba(6,11,26,.15) 55%, rgba(6,11,26,.78) 74%, rgba(4,8,22,.95) 100%);")
 
     l1 = html.escape(b['l1'])
     l2 = html.escape(b['l2'])
@@ -118,7 +132,7 @@ def render_banner(b, size_key, w, h, idx):
 <style>
   html,body{{margin:0;padding:0;background:#060b20;overflow:hidden;font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;}}
   .canvas{{position:relative;width:{w}px;height:{h}px;overflow:hidden;background:#060b20;}}
-  .photo{{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:{op};z-index:1;filter:saturate(.82) contrast(1.03) brightness(.96);}}
+  .photo{{position:absolute;inset:0;width:100%;height:100%;object-fit:{fit};object-position:{op};z-index:1;filter:saturate(.95) contrast(1.04) brightness(.94);background:#060b20;}}
   .vignette{{position:absolute;inset:0;z-index:2;{vignette}}}
   .grain{{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:.05;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/></svg>");}}
   .brand{{position:absolute;left:{side_pad}px;top:{top_pad}px;z-index:10;display:flex;flex-direction:column;gap:{max(12, int(logo_h * 0.16))}px;}}
