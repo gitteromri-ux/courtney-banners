@@ -80,12 +80,12 @@ def render_banner(b, size_key, w, h, idx):
         h1_size = int(96 * s)
         text_width = w - side_pad * 2
 
-    cred_size = max(15, int(h1_size * 0.24))
-    cta_size = max(17, int(h1_size * 0.26))
-    cta_pad_v = max(14, int(cta_size * 0.72))
-    cta_pad_h = max(28, int(cta_size * 1.7))
-    tp_star_h = max(20, int(cta_size * 1.0))
-    tp_text = max(13, int(cta_size * 0.72))
+    cred_size = max(16, int(h1_size * 0.25))
+    cta_size = max(18, int(h1_size * 0.27))
+    cta_pad_v = max(16, int(cta_size * 0.82))
+    cta_pad_h = max(34, int(cta_size * 2.0))
+    tp_star_h = max(21, int(cta_size * 1.02))
+    tp_text = max(13, int(cta_size * 0.74))
 
     text_bottom = {'1x1': int(64 * s), '4x5': int(80 * s),
                    '9x16': int(72 * s), '191x1': int(48 * s)}[size_key]
@@ -115,17 +115,17 @@ def render_banner(b, size_key, w, h, idx):
   .brand{{position:absolute;left:{side_pad}px;top:{top_pad}px;z-index:10;}}
   .brand img{{height:{logo_h}px;display:block;opacity:.96;filter:drop-shadow(0 2px 10px rgba(0,0,0,.4));}}
   .text{{position:absolute;left:{side_pad}px;bottom:{text_bottom}px;width:{text_width}px;z-index:11;color:#f7ede0;}}
-  .h1{{font-family:'Fraunces',serif;font-variation-settings:'opsz' 144;font-weight:500;font-size:{h1_size}px;line-height:1.02;letter-spacing:-.018em;margin:0;color:#fbf3e6;text-shadow:0 4px 28px rgba(0,0,0,.6);}}
-  .h1 .b{{font-style:italic;font-weight:500;color:#e4b881;display:block;margin-top:{max(2, int(h1_size * 0.04))}px;}}
-  .cred{{margin-top:{max(20, int(h1_size * 0.26))}px;font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:{cred_size}px;color:rgba(247,237,224,.85);line-height:1.4;}}
-  .cred .name{{font-style:normal;font-weight:600;color:#fbf3e6;}}
+  .h1{{font-family:'Fraunces',serif;font-variation-settings:'opsz' 144;font-weight:600;font-size:{h1_size}px;line-height:.96;letter-spacing:-.022em;margin:0;color:#fbf3e6;text-shadow:0 5px 34px rgba(0,0,0,.62);}}
+  .h1 .b{{font-style:italic;font-weight:500;display:block;margin-top:{max(6, int(h1_size * 0.09))}px;background:linear-gradient(103deg,#f7e3b9 0%,#eac583 28%,#d29a55 55%,#f3d9a4 82%,#e6b878 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 4px 22px rgba(0,0,0,.5));}}
+  .cred{{margin-top:{max(22, int(h1_size * 0.27))}px;font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:{cred_size}px;color:rgba(247,237,224,.88);line-height:1.4;}}
+  .cred .name{{font-style:normal;font-weight:600;color:#f3d9a4;}}
   .actions{{margin-top:{max(30, int(h1_size * 0.40))}px;display:flex;flex-direction:column;align-items:flex-start;gap:{max(18, int(cta_size * 0.9))}px;}}
-  .cta{{display:inline-flex;align-items:baseline;gap:{max(10, int(cta_size * 0.55))}px;background:rgba(247,237,224,.07);color:#fbf3e6;font-family:'Fraunces',serif;font-weight:500;font-size:{cta_size}px;letter-spacing:.015em;padding:{cta_pad_v}px {cta_pad_h}px;border-radius:9999px;border:1.5px solid rgba(247,237,224,.62);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);}}
-  .cta .arr{{font-family:'Inter',sans-serif;font-weight:400;}}
+  .cta{{display:inline-flex;align-items:center;gap:{max(10, int(cta_size * 0.55))}px;background:linear-gradient(160deg,#f3dca9 0%,#e7c084 45%,#d5a057 100%);color:#221204;font-family:'Fraunces',serif;font-weight:600;font-size:{cta_size}px;letter-spacing:.012em;padding:{cta_pad_v}px {cta_pad_h}px;border-radius:5px;box-shadow:0 10px 38px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,248,230,.65);}}
+  .cta .arr{{font-family:'Inter',sans-serif;font-weight:500;}}
   .tp{{display:flex;align-items:center;gap:{max(10, int(tp_star_h * 0.5))}px;}}
   .tp img.stars{{height:{tp_star_h}px;}}
-  .tp .score{{font-family:'Inter',sans-serif;font-weight:600;font-size:{tp_text}px;color:rgba(251,243,230,.92);}}
-  .tp .word{{font-family:'Inter',sans-serif;font-weight:400;font-size:{max(11, int(tp_text * 0.9))}px;color:rgba(247,237,224,.62);}}
+  .tp .score{{font-family:'Inter',sans-serif;font-weight:600;font-size:{tp_text}px;color:rgba(251,243,230,.95);}}
+  .tp .word{{font-family:'Inter',sans-serif;font-weight:400;font-size:{max(11, int(tp_text * 0.9))}px;color:rgba(247,237,224,.68);}}
 </style></head><body>
 <div class="canvas">
   <img class="photo" src="../{photo}" alt="">
