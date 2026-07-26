@@ -63,9 +63,14 @@ def render_banner(b, size_key, w, h, idx):
     if w / h > 1.4:
         s = h / 640.0
 
-    logo_h = int(64 * s) if size_key != '191x1' else int(56 * s)
+    logo_h = {'1x1': int(140 * s), '4x5': int(150 * s),
+              '9x16': int(170 * s), '191x1': int(104 * s)}[size_key]
+    eyebrow_size = {'1x1': int(26 * s), '4x5': int(28 * s),
+                    '9x16': int(32 * s), '191x1': int(20 * s)}[size_key]
     side_pad = int(64 * s) if size_key != '191x1' else int(50 * s)
-    top_pad = int(46 * s) if size_key != '191x1' else int(34 * s)
+    # 9x16: keep brand block below IG Stories top UI (~14% of 1920 = 269px)
+    top_pad = {'1x1': int(52 * s), '4x5': int(52 * s),
+               '9x16': int(150 * s), '191x1': int(36 * s)}[size_key]
 
     if size_key == '191x1':
         h1_size = int(72 * s)
@@ -87,8 +92,10 @@ def render_banner(b, size_key, w, h, idx):
     tp_star_h = max(21, int(cta_size * 1.02))
     tp_text = max(13, int(cta_size * 0.74))
 
+    # 9x16: keep CTA/trust above IG Stories bottom UI (~20% of 1920 = 384px -> use 300 scaled)
     text_bottom = {'1x1': int(64 * s), '4x5': int(80 * s),
-                   '9x16': int(72 * s), '191x1': int(48 * s)}[size_key]
+                   '9x16': int(260 * s), '191x1': int(48 * s)}[size_key]
+    offer_size = max(14, int(h1_size * 0.20))
 
     if mode == 'side':
         vignette = ("background:"
@@ -112,13 +119,15 @@ def render_banner(b, size_key, w, h, idx):
   .photo{{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:{op};z-index:1;}}
   .vignette{{position:absolute;inset:0;z-index:2;{vignette}}}
   .grain{{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:.05;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/></svg>");}}
-  .brand{{position:absolute;left:{side_pad}px;top:{top_pad}px;z-index:10;}}
-  .brand img{{height:{logo_h}px;display:block;opacity:.96;filter:drop-shadow(0 2px 10px rgba(0,0,0,.4));}}
+  .brand{{position:absolute;left:{side_pad}px;top:{top_pad}px;z-index:10;display:flex;flex-direction:column;gap:{max(12, int(logo_h * 0.16))}px;}}
+  .brand img{{height:{logo_h}px;display:block;opacity:.98;filter:drop-shadow(0 3px 16px rgba(0,0,0,.6));}}
+  .brand .eyebrow{{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:{eyebrow_size}px;color:#f3d9a4;line-height:1.25;text-shadow:0 2px 12px rgba(0,0,0,.55);}}
   .text{{position:absolute;left:{side_pad}px;bottom:{text_bottom}px;width:{text_width}px;z-index:11;color:#f7ede0;}}
   .h1{{font-family:'Fraunces',serif;font-variation-settings:'opsz' 144;font-weight:600;font-size:{h1_size}px;line-height:.96;letter-spacing:-.022em;margin:0;color:#fbf3e6;text-shadow:0 5px 34px rgba(0,0,0,.62);}}
   .h1 .b{{font-style:italic;font-weight:500;display:block;margin-top:{max(6, int(h1_size * 0.09))}px;background:linear-gradient(103deg,#f7e3b9 0%,#eac583 28%,#d29a55 55%,#f3d9a4 82%,#e6b878 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 4px 22px rgba(0,0,0,.5));}}
   .cred{{margin-top:{max(22, int(h1_size * 0.27))}px;font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:{cred_size}px;color:rgba(247,237,224,.88);line-height:1.4;}}
   .cred .name{{font-style:normal;font-weight:600;color:#f3d9a4;}}
+  .offer{{margin-top:{max(10, int(h1_size * 0.13))}px;font-family:'Inter',sans-serif;font-weight:500;font-size:{offer_size}px;color:rgba(251,243,230,.94);letter-spacing:.01em;}}
   .actions{{margin-top:{max(30, int(h1_size * 0.40))}px;display:flex;flex-direction:column;align-items:flex-start;gap:{max(18, int(cta_size * 0.9))}px;}}
   .cta{{display:inline-flex;align-items:center;gap:{max(10, int(cta_size * 0.55))}px;background:linear-gradient(160deg,#f3dca9 0%,#e7c084 45%,#d5a057 100%);color:#221204;font-family:'Fraunces',serif;font-weight:600;font-size:{cta_size}px;letter-spacing:.012em;padding:{cta_pad_v}px {cta_pad_h}px;border-radius:5px;box-shadow:0 10px 38px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,248,230,.65);}}
   .cta .arr{{font-family:'Inter',sans-serif;font-weight:500;}}
@@ -132,13 +141,14 @@ def render_banner(b, size_key, w, h, idx):
   <div class="vignette"></div>
   <div class="grain"></div>
 
-  <div class="brand"><img src="../assets/lla_logo_ivory.png" alt="Longevity Life Academy by eTeacher Group"></div>
+  <div class="brand"><img src="../assets/lla_logo_ivory.png" alt="Longevity Life Academy by eTeacher Group"><div class="eyebrow">Live Online Longevity Course</div></div>
 
   <div class="text">
     <h1 class="h1">{l1}<span class="b">{l2}</span></h1>
-    <div class="cred">With <span class="name">Courtney</span>, Longevity Life Academy Instructor</div>
+    <div class="cred">Taught live by <span class="name">Courtney</span>, Longevity Life Academy Instructor</div>
+    <div class="offer">Enrollment now open</div>
     <div class="actions">
-      <a class="cta">Enroll Now <span class="arr">→</span></a>
+      <a class="cta">Learn More <span class="arr">→</span></a>
       <div class="tp">
         <img class="stars" src="../assets/tp_stars-5.svg">
         <span class="score">4.6</span>
