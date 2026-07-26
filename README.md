@@ -1,6 +1,6 @@
-# Courtney Banners — LLA Meta/IG Gallery
+# Courtney Banners V2 — LLA Meta/IG Gallery
 
-9 Meta/Instagram ad banners built on the strongest hooks from **Courtney's own on-camera script** for Longevity Life Academy — each rendered in 4 real ad sizes (36 creatives total).
+6 Meta/Instagram ad banners for Longevity Life Academy by eTeacher Group — each rendered in 4 real ad sizes (24 creatives total). V2 rebuild with the wooden library set, huge brand lockup on top, and bold conversion-focused headlines.
 
 **Live gallery:** https://gitteromri-ux.github.io/courtney-banners/
 
@@ -10,19 +10,16 @@
 - **Real Courtney imagery only** — frames taken from the raw home-couch footage (`Courtney_FRONT_PRO.mp4`). No AI-generated likeness; upscaling is math-based only (Lanczos), no face alteration.
 - LLA brand system: navy / gold / ice-blue, Inter + Instrument Serif, Trustpilot proof (4.6/5 · 600+ reviews), **From $289/mo**, CTA **"Claim Your Seat →"** (from her script: "Class is in session, and there's a seat for you").
 
-## The 9 hooks
+## The 6 headlines (V2)
 
-| # | Banner | Headline (her words) |
-|---|--------|----------------------|
-| 1 | Advice Is Everywhere | "It seems like longevity advice is everywhere." |
-| 2 | A Clear Path | "You didn't lack willpower — you lacked a clear path." |
-| 3 | Not Your Fault | "It wasn't your fault." |
-| 4 | A Real Curriculum | "Six pillars, like a real curriculum — not a pile of tips." |
-| 5 | Harvard · 14 Years | Harvard tracked 120,000 adults — five habits by age 40, 14 extra years. |
-| 6 | Your Blueprint | "18 lessons, week by week — your tailored longevity blueprint." |
-| 7 | Buried in Information | "You don't need more information. You're already buried in it." |
-| 8 | Raise Your Hand | "A guided classroom — where you can raise your hand." |
-| 9 | Class Is in Session | "Class is in session, and there's a seat for you." |
+| # | Headline |
+|---|----------|
+| 1 | Live Longer. Learn How. |
+| 2 | Your Longevity Protocol. Made Personal. |
+| 3 | Decode Your Biomarkers. Extend Your Life. |
+| 4 | The Longevity Course, Taught Live. |
+| 5 | Age Slower. Starts in Class. |
+| 6 | Enroll. Live Longer. Live Stronger. |
 
 ## Sizes per banner
 

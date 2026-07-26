@@ -1,61 +1,52 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8">
+<html lang="en"><head><meta charset="utf-8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800;900&display=swap" rel="stylesheet">
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
-html,body { width:1080px; height:1350px; overflow:hidden; background:#020B1C; }
-.canvas { position:relative; width:1080px; height:1350px; background:#020B1C; font-family:'Inter',sans-serif; overflow:hidden; }
-.serif { font-family:'Instrument Serif',serif; font-weight:400; letter-spacing:-.01em; line-height:1.02; text-shadow:0 4px 24px rgba(0,0,0,.6); }
-.serif i { font-style:italic; color:#A9CFFF; }
+  html,body{margin:0;padding:0;background:#010712;overflow:hidden;font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+  .canvas{position:relative;width:1080px;height:1350px;overflow:hidden;background:#010712;}
 </style></head><body>
 <style>
-.photo { position:absolute; left:0; right:0; top:0; bottom:165px; overflow:hidden; }
-.photo img { width:100%; height:100%; object-fit:cover; }
-.scrim { position:absolute; left:0; right:0; top:0; bottom:165px; background:linear-gradient(90deg, rgba(2,11,28,.88) 0%, rgba(2,11,28,.55) 42%, rgba(2,11,28,.12) 72%, rgba(2,11,28,0) 100%), linear-gradient(180deg, rgba(2,11,28,0) 60%, rgba(2,11,28,.5) 100%); }
-.content { position:absolute; z-index:5; left:62px; right:62px; bottom:223px; text-align:left; color:#fff; }
-.eyebrow { display:flex; align-items:center; gap:11px; margin-bottom:20px; }
-.eyebrow .dot { width:10px; height:10px; border-radius:50%; background:#E8A75A; box-shadow:0 0 12px rgba(232,167,90,.9); }
-.eyebrow .txt { font-size:21px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; text-shadow:0 1px 8px rgba(0,0,0,.7); }
-.eyebrow .txt b { color:#7EC8FF; font-weight:700; }
-.cred { color:#fff; font-weight:700; text-transform:uppercase; letter-spacing:.13em; line-height:1.7; text-shadow:0 1px 8px rgba(0,0,0,.8); }
-.cred .rule { display:inline-block; width:31px; height:3px; background:#E8A75A; vertical-align:middle; margin-right:13px; border-radius:2px; }
-.cred b { color:#E8A75A; }
-.cred .f { color:#A9CFFF; font-weight:600; letter-spacing:.11em; }
-.bar { position:absolute; left:0; right:0; bottom:0; height:165px; background:linear-gradient(180deg,#03132E 0%,#010B1E 100%); border-top:1px solid rgba(232,167,90,.55); display:flex; align-items:center; padding:0 40px; z-index:20; gap:22px; }
-.bar .logo img { height:90px; display:block; }
-.bar .mid { margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:6px; color:#fff; text-align:center; }
-.bar .mid .r1 { display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.85); font-weight:600; white-space:nowrap; }
-.bar .mid .r2 { font-size:16px; font-weight:500; color:rgba(255,255,255,.6); letter-spacing:.04em; }
-.cta { display:inline-flex; align-items:center; gap:11px; background:linear-gradient(135deg,#3A8DFF 0%,#006EFF 100%); color:#fff; font-weight:800; font-size:24px; padding:19px 35px; border-radius:999px; border:1px solid rgba(255,255,255,.5); box-shadow:0 6px 24px rgba(0,110,255,.5), inset 0 1px 0 rgba(255,255,255,.3); white-space:nowrap; font-family:'Inter',sans-serif; }
+  .canvas{background:#010712;}
+  .photo-img{ position:absolute; left:0; top:0; width:1080px; height:742px; object-fit:cover; object-position:center 20%; z-index:1; }
+  .photo-fade{ position:absolute; left:0; top:0; width:1080px; height:1350px; background:linear-gradient(180deg, rgba(1,7,18,0) 0%, rgba(1,7,18,0) 35%, rgba(1,7,18,.55) 52%, #010712 66%); z-index:2; }
+  .brand-top{ position:absolute; left:60px; top:51px; z-index:10; display:flex; align-items:center; }
+  .brand-top img{ height:151px; display:block; }
+  .text-area{ position:absolute; left:60px; right:60px; top:790px; z-index:11; color:#fff; }
+  .h1{ font-family:'Playfair Display','Instrument Serif',serif; font-weight:800; font-size:84px; line-height:1.02; letter-spacing:-.015em; margin:0; color:#fff; text-shadow:0 2px 24px rgba(0,0,0,.8); }
+  .h1 .b{ font-weight:900; }
+  .h1 .gold{ color:#E8A75A; }
+  .cred{ margin-top:25px; font-family:'Inter',sans-serif; font-weight:600; font-size:23px; letter-spacing:.01em; color:#A9CFFF; line-height:1.35; }
+  .cred b{ color:#E8A75A; font-weight:800; }
+  .cta-block{ margin-top:42px; display:flex; flex-direction:column; align-items:flex-start; gap:17px; }
+  .cta{ display:inline-flex; align-items:center; gap:12px; background:linear-gradient(135deg,#3A8DFF 0%,#006EFF 100%); color:#fff; font-family:'Inter',sans-serif; font-weight:900; font-size:35px; padding:29px 59px; border-radius:9999px; border:1px solid rgba(255,255,255,.5); box-shadow:0 12px 36px rgba(0,110,255,.55), inset 0 2px 0 rgba(255,255,255,.3); letter-spacing:.01em; }
+  .cta .arrow{ display:inline-block; margin-left:7px; }
+  .tp{ display:flex; align-items:center; gap:11px; }
+  .tp img.stars{ height:38px; }
+  .tp .txt{ font-family:'Inter',sans-serif; font-weight:700; font-size:22px; color:#fff; letter-spacing:.01em; }
+  .tp .txt .lt{ font-weight:500; color:rgba(255,255,255,.72); }
+  /* subtle warm accent glow on photo side */
+  .warm-glow{ position:absolute; right:-20%; top:-15%; width:70%; height:70%; background:radial-gradient(closest-side, rgba(232,167,90,.22), transparent 70%); z-index:1; pointer-events:none; }
 </style>
 <div class="canvas">
-  
-<div class="photo">
-  <img src="../assets/courtney_1.jpg" style="object-position:46% 22%;">
-</div>
-  <div class="scrim"></div>
-  <div class="content">
-    <div class="eyebrow"><span class="dot"></span><span class="txt">The Longevity Masterclass <b>· 100% Online</b></span></div>
-    <div class="serif" style="font-size:68px; color:#fff;">“You didn’t lack willpower —</div>
-    <div class="serif" style="font-size:79px;"><i>you lacked a clear path.”</i></div>
-    
-<div class="cred" style="font-size:17px; margin-top:22px;">
-  <span class="rule"></span>With <b>Courtney</b> — Longevity Life Academy<br>
-  <span class="f">The Longevity Masterclass · 18 Live Sessions</span>
-</div>
+  <img class="photo-img" src="../assets/composites/courtney_woodset_v3.png" alt="">
+  <div class="warm-glow"></div>
+  <div class="photo-fade"></div>
+
+  <div class="brand-top">
+    <img src="../assets/lla_logo.png" alt="Longevity Life Academy">
   </div>
-  <div class="bar">
-    <div class="logo"><img src="../assets/lla_logo.png"></div>
-    <div class="mid">
-      
-<div class="r1">
-  <img class="tpl" src="../assets/tp_logo-white.svg" style="height:33px;">
-  <img class="tps" src="../assets/tp_stars-5.svg" style="height:26px;">
-  <span style="font-size:16px; white-space:nowrap;">4.6/5 · 600+ reviews</span>
-</div>
-      <div class="r2">From $289/mo · longevitylifeacademy.com</div>
+
+  <div class="text-area">
+    <h1 class="h1"><span class="b">Your Longevity Protocol.</span><br><span class="b gold">Made Personal.</span></h1>
+    <div class="cred">With <b>Courtney</b><br>Longevity Life Academy Instructor</div>
+    <div class="cta-block">
+      <a class="cta">Enroll Now <span class="arrow">→</span></a>
+      <div class="tp">
+        <img class="stars" src="../assets/tp_stars-5.svg">
+        <div class="txt">4.6 / 5<br><span class="lt">600+ verified reviews on Trustpilot</span></div>
+      </div>
     </div>
-    <span class="cta">Claim Your Seat <span>→</span></span>
   </div>
-</div></body></html>
+</div>
+</body></html>
