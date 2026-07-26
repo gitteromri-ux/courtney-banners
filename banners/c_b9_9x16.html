@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { width:1080px; height:1920px; overflow:hidden; background:#020B1C; }
+.canvas { position:relative; width:1080px; height:1920px; background:#020B1C; font-family:'Inter',sans-serif; overflow:hidden; }
+.serif { font-family:'Instrument Serif',serif; font-weight:400; letter-spacing:-.01em; line-height:1.02; text-shadow:0 4px 24px rgba(0,0,0,.6); }
+.serif i { font-style:italic; color:#A9CFFF; }
+</style></head><body>
+<style>
+.photo { position:absolute; left:0; right:0; top:0; bottom:197px; overflow:hidden; }
+.photo img { width:100%; height:100%; object-fit:cover; }
+.scrim { position:absolute; left:0; right:0; top:0; bottom:197px; background:linear-gradient(180deg, rgba(2,11,28,.25) 0%, rgba(2,11,28,0) 30%, rgba(2,11,28,0) 45%, rgba(2,11,28,.65) 70%, rgba(2,11,28,.95) 100%); }
+.content { position:absolute; z-index:5; left:74px; right:74px; bottom:303px; text-align:left; color:#fff; }
+.eyebrow { display:flex; align-items:center; gap:13px; margin-bottom:24px; }
+.eyebrow .dot { width:12px; height:12px; border-radius:50%; background:#E8A75A; box-shadow:0 0 12px rgba(232,167,90,.9); }
+.eyebrow .txt { font-size:25px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; text-shadow:0 1px 8px rgba(0,0,0,.7); }
+.eyebrow .txt b { color:#7EC8FF; font-weight:700; }
+.cred { color:#fff; font-weight:700; text-transform:uppercase; letter-spacing:.13em; line-height:1.7; text-shadow:0 1px 8px rgba(0,0,0,.8); }
+.cred .rule { display:inline-block; width:37px; height:4px; background:#E8A75A; vertical-align:middle; margin-right:16px; border-radius:2px; }
+.cred b { color:#E8A75A; }
+.cred .f { color:#A9CFFF; font-weight:600; letter-spacing:.11em; }
+.bar { position:absolute; left:0; right:0; bottom:0; height:197px; background:linear-gradient(180deg,#03132E 0%,#010B1E 100%); border-top:1px solid rgba(232,167,90,.55); display:flex; align-items:center; padding:0 32px; z-index:20; gap:16px; }
+.bar .logo img { height:90px; display:block; }
+.bar .mid { margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:8px; color:#fff; text-align:center; }
+.bar .mid .r1 { display:flex; align-items:center; gap:10px; color:rgba(255,255,255,.85); font-weight:600; white-space:nowrap; }
+.bar .mid .r2 { font-size:19px; font-weight:500; color:rgba(255,255,255,.6); letter-spacing:.04em; }
+.cta { display:inline-flex; align-items:center; gap:13px; background:linear-gradient(135deg,#3A8DFF 0%,#006EFF 100%); color:#fff; font-weight:800; font-size:22px; padding:22px 29px; border-radius:999px; border:1px solid rgba(255,255,255,.5); box-shadow:0 6px 24px rgba(0,110,255,.5), inset 0 1px 0 rgba(255,255,255,.3); white-space:nowrap; font-family:'Inter',sans-serif; }
+</style>
+<div class="canvas">
+  
+<div class="photo">
+  <img src="../assets/courtney_1.jpg" style="object-position:46% 22%;">
+</div>
+  <div class="scrim"></div>
+  <div class="content">
+    <div class="eyebrow"><span class="dot"></span><span class="txt">The Longevity Masterclass <b>· 100% Online</b></span></div>
+    <div class="serif" style="font-size:81px; color:#fff;">“Class is in session, and</div>
+    <div class="serif" style="font-size:95px;"><i>there’s a seat for you.”</i></div>
+    
+<div class="cred" style="font-size:21px; margin-top:26px;">
+  <span class="rule"></span>With <b>Courtney</b> — Longevity Life Academy<br>
+  <span class="f">The Longevity Masterclass · 18 Live Sessions</span>
+</div>
+  </div>
+  <div class="bar">
+    <div class="logo"><img src="../assets/lla_logo.png"></div>
+    <div class="mid">
+      
+<div class="r1">
+  <img class="tpl" src="../assets/tp_logo-white.svg" style="height:39px;">
+  <img class="tps" src="../assets/tp_stars-5.svg" style="height:31px;">
+  <span style="font-size:19px; white-space:nowrap;">4.6/5 · 600+ reviews</span>
+</div>
+      <div class="r2">From $289/mo · longevitylifeacademy.com</div>
+    </div>
+    <span class="cta">Claim Your Seat <span>→</span></span>
+  </div>
+</div></body></html>

@@ -1,0 +1,346 @@
+{
+  "courtney": [
+    {
+      "id": "c_b1",
+      "title": "Advice Is Everywhere",
+      "sizes": {
+        "1x1": {
+          "html": "c_b1_1x1.html",
+          "png": "c_b1_1x1.png",
+          "w": 1080,
+          "h": 1080,
+          "label": "1:1 Feed",
+          "note": "Instagram Post / FB Feed Square"
+        },
+        "4x5": {
+          "html": "c_b1_4x5.html",
+          "png": "c_b1_4x5.png",
+          "w": 1080,
+          "h": 1350,
+          "label": "4:5 Vertical",
+          "note": "Instagram / FB Feed Vertical"
+        },
+        "9x16": {
+          "html": "c_b1_9x16.html",
+          "png": "c_b1_9x16.png",
+          "w": 1080,
+          "h": 1920,
+          "label": "9:16 Story",
+          "note": "IG Stories, Reels, FB Stories"
+        },
+        "191x1": {
+          "html": "c_b1_191x1.html",
+          "png": "c_b1_191x1.png",
+          "w": 1200,
+          "h": 628,
+          "label": "1.91:1 Link",
+          "note": "FB Link Ad / Marketplace"
+        }
+      }
+    },
+    {
+      "id": "c_b2",
+      "title": "A Clear Path",
+      "sizes": {
+        "1x1": {
+          "html": "c_b2_1x1.html",
+          "png": "c_b2_1x1.png",
+          "w": 1080,
+          "h": 1080,
+          "label": "1:1 Feed",
+          "note": "Instagram Post / FB Feed Square"
+        },
+        "4x5": {
+          "html": "c_b2_4x5.html",
+          "png": "c_b2_4x5.png",
+          "w": 1080,
+          "h": 1350,
+          "label": "4:5 Vertical",
+          "note": "Instagram / FB Feed Vertical"
+        },
+        "9x16": {
+          "html": "c_b2_9x16.html",
+          "png": "c_b2_9x16.png",
+          "w": 1080,
+          "h": 1920,
+          "label": "9:16 Story",
+          "note": "IG Stories, Reels, FB Stories"
+        },
+        "191x1": {
+          "html": "c_b2_191x1.html",
+          "png": "c_b2_191x1.png",
+          "w": 1200,
+          "h": 628,
+          "label": "1.91:1 Link",
+          "note": "FB Link Ad / Marketplace"
+        }
+      }
+    },
+    {
+      "id": "c_b3",
+      "title": "Not Your Fault",
+      "sizes": {
+        "1x1": {
+          "html": "c_b3_1x1.html",
+          "png": "c_b3_1x1.png",
+          "w": 1080,
+          "h": 1080,
+          "label": "1:1 Feed",
+          "note": "Instagram Post / FB Feed Square"
+        },
+        "4x5": {
+          "html": "c_b3_4x5.html",
+          "png": "c_b3_4x5.png",
+          "w": 1080,
+          "h": 1350,
+          "label": "4:5 Vertical",
+          "note": "Instagram / FB Feed Vertical"
+        },
+        "9x16": {
+          "html": "c_b3_9x16.html",
+          "png": "c_b3_9x16.png",
+          "w": 1080,
+          "h": 1920,
+          "label": "9:16 Story",
+          "note": "IG Stories, Reels, FB Stories"
+        },
+        "191x1": {
+          "html": "c_b3_191x1.html",
+          "png": "c_b3_191x1.png",
+          "w": 1200,
+          "h": 628,
+          "label": "1.91:1 Link",
+          "note": "FB Link Ad / Marketplace"
+        }
+      }
+    },
+    {
+      "id": "c_b4",
+      "title": "A Real Curriculum",
+      "sizes": {
+        "1x1": {
+          "html": "c_b4_1x1.html",
+          "png": "c_b4_1x1.png",
+          "w": 1080,
+          "h": 1080,
+          "label": "1:1 Feed",
+          "note": "Instagram Post / FB Feed Square"
+        },
+        "4x5": {
+          "html": "c_b4_4x5.html",
+          "png": "c_b4_4x5.png",
+          "w": 1080,
+          "h": 1350,
+          "label": "4:5 Vertical",
+          "note": "Instagram / FB Feed Vertical"
+        },
+        "9x16": {
+          "html": "c_b4_9x16.html",
+          "png": "c_b4_9x16.png",
+          "w": 1080,
+          "h": 1920,
+          "label": "9:16 Story",
+          "note": "IG Stories, Reels, FB Stories"
+        },
+        "191x1": {
+          "html": "c_b4_191x1.html",
+          "png": "c_b4_191x1.png",
+          "w": 1200,
+          "h": 628,
+          "label": "1.91:1 Link",
+          "note": "FB Link Ad / Marketplace"
+        }
+      }
+    },
+    {
+      "id": "c_b5",
+      "title": "Harvard \u00b7 14 Years",
+      "sizes": {
+        "1x1": {
+          "html": "c_b5_1x1.html",
+          "png": "c_b5_1x1.png",
+          "w": 1080,
+          "h": 1080,
+          "label": "1:1 Feed",
+          "note": "Instagram Post / FB Feed Square"
+        },
+        "4x5": {
+          "html": "c_b5_4x5.html",
+          "png": "c_b5_4x5.png",
+          "w": 1080,
+          "h": 1350,
+          "label": "4:5 Vertical",
+          "note": "Instagram / FB Feed Vertical"
+        },
+        "9x16": {
+          "html": "c_b5_9x16.html",
+          "png": "c_b5_9x16.png",
+          "w": 1080,
+          "h": 1920,
+          "label": "9:16 Story",
+          "note": "IG Stories, Reels, FB Stories"
+        },
+        "191x1": {
+          "html": "c_b5_191x1.html",
+          "png": "c_b5_191x1.png",
+          "w": 1200,
+          "h": 628,
+          "label": "1.91:1 Link",
+          "note": "FB Link Ad / Marketplace"
+        }
+      }
+    },
+    {
+      "id": "c_b6",
+      "title": "Your Blueprint",
+      "sizes": {
+        "1x1": {
+          "html": "c_b6_1x1.html",
+          "png": "c_b6_1x1.png",
+          "w": 1080,
+          "h": 1080,
+          "label": "1:1 Feed",
+          "note": "Instagram Post / FB Feed Square"
+        },
+        "4x5": {
+          "html": "c_b6_4x5.html",
+          "png": "c_b6_4x5.png",
+          "w": 1080,
+          "h": 1350,
+          "label": "4:5 Vertical",
+          "note": "Instagram / FB Feed Vertical"
+        },
+        "9x16": {
+          "html": "c_b6_9x16.html",
+          "png": "c_b6_9x16.png",
+          "w": 1080,
+          "h": 1920,
+          "label": "9:16 Story",
+          "note": "IG Stories, Reels, FB Stories"
+        },
+        "191x1": {
+          "html": "c_b6_191x1.html",
+          "png": "c_b6_191x1.png",
+          "w": 1200,
+          "h": 628,
+          "label": "1.91:1 Link",
+          "note": "FB Link Ad / Marketplace"
+        }
+      }
+    },
+    {
+      "id": "c_b7",
+      "title": "Buried in Information",
+      "sizes": {
+        "1x1": {
+          "html": "c_b7_1x1.html",
+          "png": "c_b7_1x1.png",
+          "w": 1080,
+          "h": 1080,
+          "label": "1:1 Feed",
+          "note": "Instagram Post / FB Feed Square"
+        },
+        "4x5": {
+          "html": "c_b7_4x5.html",
+          "png": "c_b7_4x5.png",
+          "w": 1080,
+          "h": 1350,
+          "label": "4:5 Vertical",
+          "note": "Instagram / FB Feed Vertical"
+        },
+        "9x16": {
+          "html": "c_b7_9x16.html",
+          "png": "c_b7_9x16.png",
+          "w": 1080,
+          "h": 1920,
+          "label": "9:16 Story",
+          "note": "IG Stories, Reels, FB Stories"
+        },
+        "191x1": {
+          "html": "c_b7_191x1.html",
+          "png": "c_b7_191x1.png",
+          "w": 1200,
+          "h": 628,
+          "label": "1.91:1 Link",
+          "note": "FB Link Ad / Marketplace"
+        }
+      }
+    },
+    {
+      "id": "c_b8",
+      "title": "Raise Your Hand",
+      "sizes": {
+        "1x1": {
+          "html": "c_b8_1x1.html",
+          "png": "c_b8_1x1.png",
+          "w": 1080,
+          "h": 1080,
+          "label": "1:1 Feed",
+          "note": "Instagram Post / FB Feed Square"
+        },
+        "4x5": {
+          "html": "c_b8_4x5.html",
+          "png": "c_b8_4x5.png",
+          "w": 1080,
+          "h": 1350,
+          "label": "4:5 Vertical",
+          "note": "Instagram / FB Feed Vertical"
+        },
+        "9x16": {
+          "html": "c_b8_9x16.html",
+          "png": "c_b8_9x16.png",
+          "w": 1080,
+          "h": 1920,
+          "label": "9:16 Story",
+          "note": "IG Stories, Reels, FB Stories"
+        },
+        "191x1": {
+          "html": "c_b8_191x1.html",
+          "png": "c_b8_191x1.png",
+          "w": 1200,
+          "h": 628,
+          "label": "1.91:1 Link",
+          "note": "FB Link Ad / Marketplace"
+        }
+      }
+    },
+    {
+      "id": "c_b9",
+      "title": "Class Is in Session",
+      "sizes": {
+        "1x1": {
+          "html": "c_b9_1x1.html",
+          "png": "c_b9_1x1.png",
+          "w": 1080,
+          "h": 1080,
+          "label": "1:1 Feed",
+          "note": "Instagram Post / FB Feed Square"
+        },
+        "4x5": {
+          "html": "c_b9_4x5.html",
+          "png": "c_b9_4x5.png",
+          "w": 1080,
+          "h": 1350,
+          "label": "4:5 Vertical",
+          "note": "Instagram / FB Feed Vertical"
+        },
+        "9x16": {
+          "html": "c_b9_9x16.html",
+          "png": "c_b9_9x16.png",
+          "w": 1080,
+          "h": 1920,
+          "label": "9:16 Story",
+          "note": "IG Stories, Reels, FB Stories"
+        },
+        "191x1": {
+          "html": "c_b9_191x1.html",
+          "png": "c_b9_191x1.png",
+          "w": 1200,
+          "h": 628,
+          "label": "1.91:1 Link",
+          "note": "FB Link Ad / Marketplace"
+        }
+      }
+    }
+  ]
+}
