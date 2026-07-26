@@ -1,49 +1,44 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   html,body{margin:0;padding:0;background:#0a0503;overflow:hidden;font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
   .canvas{position:relative;width:1200px;height:628px;overflow:hidden;background:#0a0503;}
-  .photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;z-index:1;}
-  .vignette{position:absolute;inset:0;z-index:2;background:linear-gradient(90deg, rgba(20,10,4,.92) 0%, rgba(20,10,4,.75) 32%, rgba(20,10,4,.15) 58%, rgba(20,10,4,0) 78%);}
-  .grain{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:.055;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/></svg>");}
-  .brand{position:absolute;left:46px;top:30px;z-index:10;display:flex;align-items:center;}
-  .brand img{height:56px;display:block;filter:brightness(1.35) drop-shadow(0 2px 12px rgba(0,0,0,.55));}
-  .text{position:absolute;left:46px;bottom:52px;width:660px;z-index:11;color:#f7ede0;}
-  .eyebrow{font-family:'Inter',sans-serif;font-weight:500;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:rgba(247,237,224,.72);margin-bottom:14px;}
-  .h1{font-family:'Fraunces',serif;font-variation-settings:'opsz' 144, 'SOFT' 30;font-weight:400;font-size:74px;line-height:.98;letter-spacing:-.02em;margin:0;color:#fbf3e6;text-shadow:0 4px 24px rgba(0,0,0,.55);}
-  .h1 .a{font-weight:400;font-style:normal;color:#fbf3e6;}
-  .h1 .b{font-weight:500;font-style:italic;color:#e4b881;display:block;margin-top:2px;}
-  .cred{margin-top:20px;font-family:'Fraunces',serif;font-variation-settings:'opsz' 14;font-style:italic;font-weight:400;font-size:17px;color:rgba(247,237,224,.78);line-height:1.35;letter-spacing:.005em;}
-  .cred .name{font-style:normal;font-weight:600;color:#f7ede0;}
-  .actions{margin-top:31px;display:flex;flex-direction:column;align-items:flex-start;gap:16px;}
-  .cta{display:inline-flex;align-items:center;gap:8px;background:rgba(247,237,224,.06);color:#f7ede0;font-family:'Inter',sans-serif;font-weight:500;font-size:16px;padding:12px 30px;border-radius:9999px;border:1px solid rgba(247,237,224,.55);letter-spacing:.14em;text-transform:uppercase;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);}
-  .cta .arr{font-family:'Inter',sans-serif;font-weight:300;margin-left:3px;transform:translateY(-1px);}
-  .tp{display:flex;align-items:center;gap:10px;color:rgba(247,237,224,.75);}
-  .tp img.stars{height:18px;filter:brightness(1.05);}
-  .tp .score{font-family:'Inter',sans-serif;font-weight:600;font-size:12px;letter-spacing:.02em;color:rgba(247,237,224,.88);}
-  .tp .word{font-family:'Inter',sans-serif;font-weight:400;font-size:10px;letter-spacing:.04em;color:rgba(247,237,224,.55);}
+  .photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:72% 38%;z-index:1;}
+  .vignette{position:absolute;inset:0;z-index:2;background:linear-gradient(97deg, rgba(12,6,2,.96) 0%, rgba(14,7,3,.85) 26%, rgba(16,8,3,.45) 48%, rgba(16,8,3,0) 66%),linear-gradient(180deg, rgba(12,6,2,0) 55%, rgba(12,6,2,.55) 100%);}
+  .grain{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:.05;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/></svg>");}
+  .brand{position:absolute;left:49px;top:33px;z-index:10;}
+  .brand img{height:54px;display:block;opacity:.96;filter:drop-shadow(0 2px 10px rgba(0,0,0,.4));}
+  .text{position:absolute;left:49px;bottom:47px;width:672px;z-index:11;color:#f7ede0;}
+  .h1{font-family:'Fraunces',serif;font-variation-settings:'opsz' 144;font-weight:500;font-size:70px;line-height:1.02;letter-spacing:-.018em;margin:0;color:#fbf3e6;text-shadow:0 4px 28px rgba(0,0,0,.6);}
+  .h1 .b{font-style:italic;font-weight:500;color:#e4b881;display:block;margin-top:2px;}
+  .cred{margin-top:20px;font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:16px;color:rgba(247,237,224,.85);line-height:1.4;}
+  .cred .name{font-style:normal;font-weight:600;color:#fbf3e6;}
+  .actions{margin-top:30px;display:flex;flex-direction:column;align-items:flex-start;gap:18px;}
+  .cta{display:inline-flex;align-items:baseline;gap:10px;background:rgba(247,237,224,.07);color:#fbf3e6;font-family:'Fraunces',serif;font-weight:500;font-size:18px;letter-spacing:.015em;padding:14px 30px;border-radius:9999px;border:1.5px solid rgba(247,237,224,.62);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);}
+  .cta .arr{font-family:'Inter',sans-serif;font-weight:400;}
+  .tp{display:flex;align-items:center;gap:10px;}
+  .tp img.stars{height:20px;}
+  .tp .score{font-family:'Inter',sans-serif;font-weight:600;font-size:13px;color:rgba(251,243,230,.92);}
+  .tp .word{font-family:'Inter',sans-serif;font-weight:400;font-size:11px;color:rgba(247,237,224,.62);}
 </style></head><body>
 <div class="canvas">
   <img class="photo" src="../assets/composites/courtney_lux_v2.png" alt="">
   <div class="vignette"></div>
   <div class="grain"></div>
 
-  <div class="brand">
-    <img src="../assets/lla_logo.png" alt="Longevity Life Academy">
-  </div>
+  <div class="brand"><img src="../assets/lla_logo_ivory.png" alt="Longevity Life Academy by eTeacher Group"></div>
 
   <div class="text">
-    <div class="eyebrow">Longevity Life Academy</div>
-    <h1 class="h1"><span class="a">Age Slower.</span><span class="b">Starts in Class.</span></h1>
+    <h1 class="h1">Age Slower.<span class="b">Starts in Class.</span></h1>
     <div class="cred">With <span class="name">Courtney</span>, Longevity Life Academy Instructor</div>
     <div class="actions">
       <a class="cta">Enroll Now <span class="arr">→</span></a>
       <div class="tp">
         <img class="stars" src="../assets/tp_stars-5.svg">
         <span class="score">4.6</span>
-        <span class="word">Trustpilot &nbsp;&nbsp;600+ verified reviews</span>
+        <span class="word">600+ verified reviews on Trustpilot</span>
       </div>
     </div>
   </div>
