@@ -144,9 +144,9 @@ def render_banner(b, size_key, w, h, idx):
   .cred{{margin-top:{max(22, int(h1_size * 0.27))}px;font-family:'EB Garamond',serif;font-style:italic;font-weight:500;font-size:{cred_size}px;color:rgba(232,241,252,.9);line-height:1.4;}}
   .cred .name{{font-style:normal;font-weight:700;color:#9cc3ef;}}
   .offer{{margin-top:{max(10, int(h1_size * 0.13))}px;font-family:'Inter',sans-serif;font-weight:500;font-size:{offer_size}px;color:rgba(245,248,252,.95);letter-spacing:.01em;}}
-  .facts{{margin-top:{max(16, int(h1_size * 0.24))}px;display:flex;flex-direction:column;gap:{max(9, int(fact_size * 0.52))}px;}}
-  .facts .f{{display:flex;align-items:baseline;gap:{max(9, int(fact_size * 0.5))}px;font-family:'Inter',sans-serif;font-weight:500;font-size:{fact_size}px;color:rgba(236,244,253,.95);line-height:1.3;}}
-  .facts .f .ck{{color:#59d3c8;font-weight:700;font-size:{int(fact_size * 0.95)}px;}}
+  .facts{{margin-top:{max(16, int(h1_size * 0.24))}px;display:flex;flex-direction:column;gap:{max(10, int(fact_size * 0.60))}px;}}
+  .facts .f{{display:flex;align-items:center;gap:{max(14, int(fact_size * 0.75))}px;font-family:'Inter',sans-serif;font-weight:700;font-size:{int(fact_size * 1.08)}px;color:#ffffff;line-height:1.25;letter-spacing:.008em;text-shadow:0 1px 8px rgba(2,6,20,.75);}}
+  .facts .f .ck{{display:inline-flex;align-items:center;justify-content:center;width:{int(fact_size * 1.55)}px;height:{int(fact_size * 1.55)}px;border-radius:9999px;background:radial-gradient(circle at 50% 45%, #b8f4ff 0%, #7fe7ff 42%, #4bc7f2 78%, #2a8ec7 100%);color:#04121f;font-weight:900;font-size:{int(fact_size * 1.02)}px;line-height:1;flex:0 0 auto;box-shadow:0 0 10px rgba(127,231,255,1),0 0 22px rgba(127,231,255,.9),0 0 40px rgba(90,190,255,.7),0 0 72px rgba(60,150,235,.45),inset 0 0 6px rgba(255,255,255,.6);}}
   .actions{{margin-top:{max(30, int(h1_size * 0.40))}px;display:flex;flex-direction:column;align-items:flex-start;gap:{max(18, int(cta_size * 0.9))}px;}}
   .cta{{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(20,34,72,.92) 0%,rgba(10,18,46,.94) 100%);color:#ffffff;font-family:'Inter',sans-serif;font-weight:600;font-size:{cta_size}px;letter-spacing:.16em;padding:{cta_pad_v}px {cta_pad_h}px;border-radius:9999px;border:2px solid rgba(158,196,242,.95);box-shadow:0 0 26px rgba(110,160,235,.5), 0 10px 34px rgba(2,6,20,.55), inset 0 0 18px rgba(110,160,235,.18);}}
   .tp{{display:flex;align-items:center;gap:{max(10, int(tp_star_h * 0.5))}px;}}
@@ -164,9 +164,9 @@ def render_banner(b, size_key, w, h, idx):
     <h1 class="h1">{l1}<span class="b">{l2}</span></h1>
     <div class="cred">Taught live by <span class="name">Courtney</span>, Longevity Life Academy Instructor</div>
     <div class="facts">
-      <div class="f"><span class="ck">✓</span><span>18 live sessions over 18 weeks, in cohorts of 8 to 15</span></div>
-      <div class="f"><span class="ck">✓</span><span>The Six Pillars: nutrition, sleep, movement and more</span></div>
-      <div class="f"><span class="ck">✓</span><span>Finish with your written personal longevity protocol</span></div>
+      <div class="f"><span class="ck">✓</span><span>18 live sessions. Cohorts of 8-15.</span></div>
+      <div class="f"><span class="ck">✓</span><span>The Six Pillars of longevity.</span></div>
+      <div class="f"><span class="ck">✓</span><span>Your written longevity protocol.</span></div>
     </div>
     <div class="offer">Applications open for the next cohort</div>
     <div class="actions">
