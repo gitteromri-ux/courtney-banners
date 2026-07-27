@@ -3,90 +3,115 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Courtney Banners V3 — LLA Meta/IG Gallery</title>
+<title>Courtney · LLA Meta/IG Creative</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root { --bg:#0a0503; --panel:#120906; --ink:#f7ede0; --gold:#e4b881; --muted:rgba(247,237,224,.62); }
+  :root{
+    --bg:#060b20; --panel:#0b1330; --panel2:#0e1738; --line:rgba(156,195,239,.14);
+    --ink:#f2f6fd; --muted:rgba(220,232,248,.6); --neon:#8ff2ff; --accent:#6ea0eb;
+  }
   *{box-sizing:border-box;}
   html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
-  header{padding:56px 40px 40px;background:linear-gradient(180deg,#180c07 0%,#0a0503 100%);border-bottom:1px solid rgba(247,237,224,.06);}
-  header .row{max-width:1440px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;}
-  header img.logo{height:64px;filter:brightness(1.35);}
-  .eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:14px;}
-  header h1{font-family:'Fraunces',serif;font-weight:400;font-size:52px;letter-spacing:-.02em;line-height:1;margin:0;}
-  header h1 em{font-style:italic;color:var(--gold);font-weight:500;}
-  header p{margin:14px 0 0;color:var(--muted);font-size:15px;max-width:640px;line-height:1.6;}
-  header .meta{color:var(--muted);font-size:13px;letter-spacing:.02em;text-align:right;}
-  header .meta a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(228,184,129,.35);}
-  main{max-width:1440px;margin:0 auto;padding:48px 40px 80px;}
-  .banner{margin-bottom:72px;}
-  .banner .title{font-family:'Fraunces',serif;font-size:28px;font-weight:500;letter-spacing:-.01em;margin:0 0 6px;color:var(--ink);}
-  .banner .sub{color:var(--muted);font-size:13px;letter-spacing:.02em;margin-bottom:24px;}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;}
-  .cell{background:var(--panel);border:1px solid rgba(247,237,224,.06);border-radius:8px;overflow:hidden;transition:border .2s;}
-  .cell:hover{border-color:rgba(228,184,129,.35);}
-  .cell .frame{aspect-ratio:1/1;background:#000;display:flex;align-items:center;justify-content:center;overflow:hidden;}
-  .cell.a4x5 .frame{aspect-ratio:4/5;}
-  .cell.a9x16 .frame{aspect-ratio:9/16;}
-  .cell.a191x1 .frame{aspect-ratio:1.91/1;}
-  .cell img{width:100%;height:100%;object-fit:cover;display:block;}
-  .cell .foot{padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid rgba(247,237,224,.05);}
-  .cell .label{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);font-weight:500;}
-  .cell .note{font-size:11px;color:var(--muted);}
-  .cell .links{display:flex;gap:12px;}
-  .cell a{color:var(--muted);font-size:11px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid rgba(247,237,224,.15);padding-bottom:1px;}
-  .cell a:hover{color:var(--gold);border-color:var(--gold);}
-  footer{padding:32px 40px 60px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid rgba(247,237,224,.05);}
+  header{background:linear-gradient(180deg,#0a1230 0%,#060b20 100%);border-bottom:1px solid var(--line);}
+  header .row{max-width:1600px;margin:0 auto;padding:28px 32px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;}
+  header .brand{display:flex;align-items:center;gap:14px;}
+  header .brand .mark{width:38px;height:38px;border-radius:9px;background:radial-gradient(circle at 30% 30%,#4bc7f2,#2a6ecb 70%);box-shadow:0 0 18px rgba(75,199,242,.5);}
+  header .brand .name{font-family:'EB Garamond',serif;font-weight:500;font-size:22px;letter-spacing:.01em;}
+  header .brand .name em{font-style:italic;color:var(--neon);}
+  header .brand .sub{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:2px;}
+  header .meta{display:flex;align-items:center;gap:22px;font-size:12px;color:var(--muted);}
+  header .meta .pill{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border:1px solid var(--line);border-radius:9999px;color:var(--ink);}
+  header .meta .pill .dot{width:6px;height:6px;border-radius:50%;background:#00b67a;box-shadow:0 0 8px #00b67a;}
+  header .meta a{color:var(--neon);text-decoration:none;}
+  .stat{max-width:1600px;margin:0 auto;padding:14px 32px 22px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-radius:12px;overflow:hidden;margin-top:0;}
+  .stat > div{background:var(--bg);padding:14px 18px;}
+  .stat .k{font-family:'EB Garamond',serif;font-size:22px;font-weight:600;color:var(--ink);}
+  .stat .k em{font-style:italic;color:var(--neon);font-weight:500;}
+  .stat .v{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:4px;}
+
+  main{max-width:1600px;margin:0 auto;padding:8px 32px 60px;}
+  .set{margin:24px 0 32px;background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;}
+  .set .head{padding:16px 20px;display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-bottom:1px solid var(--line);background:var(--panel2);}
+  .set .head h2{margin:0;font-family:'EB Garamond',serif;font-weight:500;font-size:22px;letter-spacing:-.005em;color:var(--ink);}
+  .set .head h2 em{font-style:italic;color:var(--neon);font-weight:500;}
+  .set .head .tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);}
+  .grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:0;align-items:start;}
+  .cell{border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel);display:flex;flex-direction:column;align-self:start;}
+  .cell:nth-child(4n){border-right:0;}
+  .cell:nth-last-child(-n+4){border-bottom:0;}
+  .frame{position:relative;width:100%;background:#000;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+  .frame img{width:100%;height:100%;object-fit:contain;display:block;background:#000;}
+  .a1x1 .frame{aspect-ratio:1/1;}
+  .a4x5 .frame{aspect-ratio:4/5;}
+  .a9x16 .frame{aspect-ratio:9/16;}
+  .a191x1 .frame{aspect-ratio:1.91/1;}
+  .foot{padding:10px 14px;display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--panel);border-top:1px solid var(--line);}
+  .foot .label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);font-weight:600;}
+  .foot .note{font-size:10px;color:var(--muted);letter-spacing:.02em;}
+  .foot .links{display:flex;gap:6px;}
+  .foot a{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:3px 8px;border:1px solid var(--line);border-radius:4px;transition:all .15s;}
+  .foot a:hover{color:var(--neon);border-color:var(--neon);}
+  footer{max-width:1600px;margin:0 auto;padding:24px 32px 40px;color:var(--muted);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;border-top:1px solid var(--line);}
+
+  @media (max-width:1200px){.grid{grid-template-columns:1fr 1fr;} .cell:nth-child(4n){border-right:1px solid var(--line);} .cell:nth-child(2n){border-right:0;} .stat{grid-template-columns:1fr 1fr;}}
+  @media (max-width:640px){.grid{grid-template-columns:1fr;} .cell{border-right:0!important;} .stat{grid-template-columns:1fr;}}
 </style></head>
 <body>
 <header>
   <div class="row">
-    <div>
-      <div class="eyebrow">Longevity Life Academy · Meta / Instagram Creative</div>
-      <h1>Courtney <em>V3</em></h1>
-      <p>Final edition. Wide-set library, short bullets in strong neon ice-blue text, applications-open CTA. All 24 renders audited., Fraunces + Inter typography, refined micro-details. Six headlines, four Meta/IG sizes each — twenty-four creatives.</p>
+    <div class="brand">
+      <div class="mark"></div>
+      <div>
+        <div class="name">Longevity Life Academy <em>· Courtney</em></div>
+        <div class="sub">Meta / Instagram Creative · Six Hooks × Four Sizes</div>
+      </div>
     </div>
     <div class="meta">
-      Built · July 2026<br>
+      <span class="pill"><span class="dot"></span>24 Renders Live</span>
       <a href="https://github.com/gitteromri-ux/courtney-banners">github.com/gitteromri-ux/courtney-banners</a>
     </div>
+  </div>
+  <div class="stat">
+    <div><div class="k">6</div><div class="v">Headlines</div></div>
+    <div><div class="k">4</div><div class="v">Aspect Ratios</div></div>
+    <div><div class="k">24</div><div class="v">Meta / IG Renders</div></div>
+    <div><div class="k"><em>V11</em></div><div class="v">Neon Text · Green Trustpilot</div></div>
   </div>
 </header>
 
 <main id="gallery"></main>
-
-<footer>Longevity Life Academy by eTeacher Group · V3 · Editorial Luxury</footer>
+<footer>Longevity Life Academy by eTeacher Group · Live Online Longevity Course</footer>
 
 <script>
-const MANIFEST = {"courtney": [{"id": "c_b1", "title": "Live Longer. Learn How.", "sizes": {"1x1": {"html": "c_b1_1x1.html", "png": "c_b1_1x1.png", "w": 1080, "h": 1080, "label": "1:1 Feed", "note": "Instagram Post / FB Feed Square"}, "4x5": {"html": "c_b1_4x5.html", "png": "c_b1_4x5.png", "w": 1080, "h": 1350, "label": "4:5 Vertical", "note": "Instagram / FB Feed Vertical"}, "9x16": {"html": "c_b1_9x16.html", "png": "c_b1_9x16.png", "w": 1080, "h": 1920, "label": "9:16 Story", "note": "IG Stories, Reels, FB Stories"}, "191x1": {"html": "c_b1_191x1.html", "png": "c_b1_191x1.png", "w": 1200, "h": 628, "label": "1.91:1 Link", "note": "FB Link Ad / Marketplace"}}}, {"id": "c_b2", "title": "Your Longevity Protocol. Made Personal.", "sizes": {"1x1": {"html": "c_b2_1x1.html", "png": "c_b2_1x1.png", "w": 1080, "h": 1080, "label": "1:1 Feed", "note": "Instagram Post / FB Feed Square"}, "4x5": {"html": "c_b2_4x5.html", "png": "c_b2_4x5.png", "w": 1080, "h": 1350, "label": "4:5 Vertical", "note": "Instagram / FB Feed Vertical"}, "9x16": {"html": "c_b2_9x16.html", "png": "c_b2_9x16.png", "w": 1080, "h": 1920, "label": "9:16 Story", "note": "IG Stories, Reels, FB Stories"}, "191x1": {"html": "c_b2_191x1.html", "png": "c_b2_191x1.png", "w": 1200, "h": 628, "label": "1.91:1 Link", "note": "FB Link Ad / Marketplace"}}}, {"id": "c_b3", "title": "Decode Your Biomarkers. Extend Your Life.", "sizes": {"1x1": {"html": "c_b3_1x1.html", "png": "c_b3_1x1.png", "w": 1080, "h": 1080, "label": "1:1 Feed", "note": "Instagram Post / FB Feed Square"}, "4x5": {"html": "c_b3_4x5.html", "png": "c_b3_4x5.png", "w": 1080, "h": 1350, "label": "4:5 Vertical", "note": "Instagram / FB Feed Vertical"}, "9x16": {"html": "c_b3_9x16.html", "png": "c_b3_9x16.png", "w": 1080, "h": 1920, "label": "9:16 Story", "note": "IG Stories, Reels, FB Stories"}, "191x1": {"html": "c_b3_191x1.html", "png": "c_b3_191x1.png", "w": 1200, "h": 628, "label": "1.91:1 Link", "note": "FB Link Ad / Marketplace"}}}, {"id": "c_b4", "title": "The Longevity Course, Taught Live.", "sizes": {"1x1": {"html": "c_b4_1x1.html", "png": "c_b4_1x1.png", "w": 1080, "h": 1080, "label": "1:1 Feed", "note": "Instagram Post / FB Feed Square"}, "4x5": {"html": "c_b4_4x5.html", "png": "c_b4_4x5.png", "w": 1080, "h": 1350, "label": "4:5 Vertical", "note": "Instagram / FB Feed Vertical"}, "9x16": {"html": "c_b4_9x16.html", "png": "c_b4_9x16.png", "w": 1080, "h": 1920, "label": "9:16 Story", "note": "IG Stories, Reels, FB Stories"}, "191x1": {"html": "c_b4_191x1.html", "png": "c_b4_191x1.png", "w": 1200, "h": 628, "label": "1.91:1 Link", "note": "FB Link Ad / Marketplace"}}}, {"id": "c_b5", "title": "Age Slower. Starts in Class.", "sizes": {"1x1": {"html": "c_b5_1x1.html", "png": "c_b5_1x1.png", "w": 1080, "h": 1080, "label": "1:1 Feed", "note": "Instagram Post / FB Feed Square"}, "4x5": {"html": "c_b5_4x5.html", "png": "c_b5_4x5.png", "w": 1080, "h": 1350, "label": "4:5 Vertical", "note": "Instagram / FB Feed Vertical"}, "9x16": {"html": "c_b5_9x16.html", "png": "c_b5_9x16.png", "w": 1080, "h": 1920, "label": "9:16 Story", "note": "IG Stories, Reels, FB Stories"}, "191x1": {"html": "c_b5_191x1.html", "png": "c_b5_191x1.png", "w": 1200, "h": 628, "label": "1.91:1 Link", "note": "FB Link Ad / Marketplace"}}}, {"id": "c_b6", "title": "Enroll. Live Longer. Live Stronger.", "sizes": {"1x1": {"html": "c_b6_1x1.html", "png": "c_b6_1x1.png", "w": 1080, "h": 1080, "label": "1:1 Feed", "note": "Instagram Post / FB Feed Square"}, "4x5": {"html": "c_b6_4x5.html", "png": "c_b6_4x5.png", "w": 1080, "h": 1350, "label": "4:5 Vertical", "note": "Instagram / FB Feed Vertical"}, "9x16": {"html": "c_b6_9x16.html", "png": "c_b6_9x16.png", "w": 1080, "h": 1920, "label": "9:16 Story", "note": "IG Stories, Reels, FB Stories"}, "191x1": {"html": "c_b6_191x1.html", "png": "c_b6_191x1.png", "w": 1200, "h": 628, "label": "1.91:1 Link", "note": "FB Link Ad / Marketplace"}}}]};
-const SIZE_ORDER = ['1x1','4x5','9x16','191x1'];
-const gallery = document.getElementById('gallery');
-MANIFEST.courtney.forEach(b => {
-  const wrap = document.createElement('section');
-  wrap.className = 'banner';
-  wrap.innerHTML = `<h2 class="title">${b.title}</h2><div class="sub">${b.id.toUpperCase()} · Four Meta/IG sizes</div>`;
-  const grid = document.createElement('div'); grid.className = 'grid';
-  SIZE_ORDER.forEach(k => {
-    const s = b.sizes[k]; if (!s) return;
+const MANIFEST = [
+ {id:"c_b1",title:"Live Longer. Learn How."},
+ {id:"c_b2",title:"Your Longevity Protocol. Made Personal."},
+ {id:"c_b3",title:"Decode Your Biomarkers. Extend Your Life."},
+ {id:"c_b4",title:"The Longevity Course, Taught Live."},
+ {id:"c_b5",title:"Age Slower. Starts in Class."},
+ {id:"c_b6",title:"Enroll. Live Longer. Live Stronger."}
+];
+const SIZES = [
+ {k:"1x1", label:"1:1 Feed", note:"1080×1080 · IG Post / FB Feed"},
+ {k:"4x5", label:"4:5 Vertical", note:"1080×1350 · IG / FB Feed"},
+ {k:"9x16", label:"9:16 Story", note:"1080×1920 · Stories / Reels"},
+ {k:"191x1", label:"1.91:1 Link", note:"1200×628 · FB Link Ad"}
+];
+const g = document.getElementById('gallery');
+MANIFEST.forEach((b, i) => {
+  const s = document.createElement('section'); s.className='set';
+  const parts = b.title.split('. ');
+  const titleHTML = parts.length>1 ? `${parts[0]}. <em>${parts.slice(1).join('. ')}</em>` : b.title;
+  s.innerHTML = `<div class="head"><h2>${titleHTML}</h2><span class="tag">Hook ${String(i+1).padStart(2,'0')} · 4 Sizes</span></div><div class="grid"></div>`;
+  const grid = s.querySelector('.grid');
+  SIZES.forEach(sz => {
     const cell = document.createElement('div');
-    cell.className = 'cell a' + k;
-    cell.innerHTML = `
-      <div class="frame"><img src="banners/${s.png}" alt="${b.title} ${s.label}" loading="lazy"></div>
-      <div class="foot">
-        <div>
-          <div class="label">${s.label}</div>
-          <div class="note">${s.w}×${s.h} · ${s.note}</div>
-        </div>
-        <div class="links">
-          <a href="banners/${s.png}" target="_blank">PNG</a>
-          <a href="banners/${s.html}" target="_blank">HTML</a>
-        </div>
-      </div>`;
+    cell.className = 'cell a'+sz.k;
+    cell.innerHTML = `<div class="frame"><img src="banners/${b.id}_${sz.k}.png" alt="${b.title} ${sz.label}" loading="lazy"></div><div class="foot"><div><div class="label">${sz.label}</div><div class="note">${sz.note}</div></div><div class="links"><a href="banners/${b.id}_${sz.k}.png" target="_blank">PNG</a><a href="banners/${b.id}_${sz.k}.html" target="_blank">HTML</a></div></div>`;
     grid.appendChild(cell);
   });
-  wrap.appendChild(grid);
-  gallery.appendChild(wrap);
+  g.appendChild(s);
 });
 </script>
 </body></html>
