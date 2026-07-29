@@ -76,7 +76,19 @@ def render_banner(b, size_key, w, h, idx):
         s = h / 640.0
 
     logo_h = {'1x1': int(140 * s), '4x5': int(150 * s),
-              '9x16': int(170 * s), '191x1': int(104 * s)}[size_key]
+              '9x16': int(170 * s), '191x1': int(90 * s)}[size_key]
+
+    # Per-size photo box: shift subject up on 9x16 (clears face for larger copy),
+    # nudge subject right on 1x1 (clears italic headline tail).
+    if size_key == '9x16':
+        photo_box = 'top:-14%;left:0;width:100%;height:114%;'
+    elif size_key == '1x1':
+        photo_box = 'top:0;left:0;width:110%;height:100%;'
+    else:
+        photo_box = 'inset:0;width:100%;height:100%;'
+
+    # 191x1 is too short (628px) for eyebrow + enlarged copy: drop eyebrow there.
+    eyebrow_html = '' if size_key == '191x1' else '<div class="eyebrow">Live Online Longevity Course</div>'
     eyebrow_size = {'1x1': int(26 * s), '4x5': int(28 * s),
                     '9x16': int(32 * s), '191x1': int(20 * s)}[size_key]
     side_pad = int(64 * s) if size_key != '191x1' else int(50 * s)
@@ -85,20 +97,20 @@ def render_banner(b, size_key, w, h, idx):
                '9x16': int(150 * s), '191x1': int(36 * s)}[size_key]
 
     if size_key == '191x1':
-        h1_size = int(52 * s)
-        text_width = int(w * 0.50)
-    elif size_key == '1x1':
         h1_size = int(64 * s)
-        text_width = int(w * 0.54)
+        text_width = int(w * 0.62)
+    elif size_key == '1x1':
+        h1_size = int(92 * s)
+        text_width = int(w * 0.64)
     elif size_key == '4x5':
-        h1_size = int(66 * s)
-        text_width = int(w * 0.54)
+        h1_size = int(98 * s)
+        text_width = int(w * 0.64)
     else:  # 9x16
-        h1_size = int(82 * s)
+        h1_size = int(118 * s)
         text_width = w - side_pad * 2
 
-    cred_size = max(16, int(h1_size * 0.25))
-    cta_size = max(18, int(h1_size * 0.27))
+    cred_size = max(20, int(h1_size * 0.24))
+    cta_size = max(24, int(h1_size * 0.28))
     cta_pad_v = max(16, int(cta_size * 0.82))
     cta_pad_h = max(34, int(cta_size * 2.0))
     tp_star_h = max(21, int(cta_size * 1.02))
@@ -106,9 +118,9 @@ def render_banner(b, size_key, w, h, idx):
 
     # 9x16: keep CTA/trust above IG Stories bottom UI (~20% of 1920 = 384px -> use 300 scaled)
     text_bottom = {'1x1': int(64 * s), '4x5': int(80 * s),
-                   '9x16': int(260 * s), '191x1': int(48 * s)}[size_key]
+                   '9x16': int(240 * s), '191x1': int(44 * s)}[size_key]
     offer_size = max(14, int(h1_size * 0.22))
-    fact_size = max(15, int(h1_size * 0.26))
+    fact_size = max(22, int(h1_size * 0.30))
 
     # Lighter, moodier vignette so the wooden library set stays visible.
     # Left side gets a soft dark scrim behind text; top and bottom get gentle fades for logo/CTA legibility.
@@ -132,7 +144,7 @@ def render_banner(b, size_key, w, h, idx):
 <style>
   html,body{{margin:0;padding:0;background:#060b20;overflow:hidden;font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;}}
   .canvas{{position:relative;width:{w}px;height:{h}px;overflow:hidden;background:#060b20;}}
-  .photo{{position:absolute;inset:0;width:100%;height:100%;object-fit:{fit};object-position:{op};z-index:1;filter:saturate(.95) contrast(1.04) brightness(.94);background:#060b20;}}
+  .photo{{position:absolute;{photo_box}object-fit:{fit};object-position:{op};z-index:1;filter:saturate(.95) contrast(1.04) brightness(.94);background:#060b20;}}
   .vignette{{position:absolute;inset:0;z-index:2;{vignette}}}
   .grain{{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:.05;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/></svg>");}}
   .brand{{position:absolute;left:{side_pad}px;top:{top_pad}px;z-index:10;display:flex;flex-direction:column;gap:{max(12, int(logo_h * 0.16))}px;}}
@@ -158,7 +170,7 @@ def render_banner(b, size_key, w, h, idx):
   <div class="vignette"></div>
   <div class="grain"></div>
 
-  <div class="brand"><img src="../assets/lla_logo.png" alt="Longevity Life Academy by eTeacher Group"><div class="eyebrow">Live Online Longevity Course</div></div>
+  <div class="brand"><img src="../assets/lla_logo.png" alt="Longevity Life Academy by eTeacher Group">{eyebrow_html}</div>
 
   <div class="text">
     <h1 class="h1">{l1}<span class="b">{l2}</span></h1>
