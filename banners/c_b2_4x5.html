@@ -14,7 +14,7 @@ html,body{width:1080px;height:1350px;overflow:hidden;background:#0a1020;}
 .scrim-t{position:absolute;left:0;right:0;top:0;height:26%;
   background:linear-gradient(to bottom,rgba(6,10,20,.80) 0%,rgba(6,10,20,.35) 55%,rgba(6,10,20,0) 100%);}
 .content{position:absolute;left:68px;right:68px;bottom:68px;}
-.logo{width:660px;margin-bottom:31px;}
+.logo{width:600px;margin-bottom:31px;}
 .logo img{width:100%;display:block;}
 .eyebrow{font-family:'Inter',sans-serif;font-weight:500;color:rgba(255,255,255,.82);
   font-size:23px;margin-bottom:20px;letter-spacing:.02em;white-space:nowrap;}
@@ -24,19 +24,19 @@ h1 span{display:block;white-space:nowrap;}
 h1 .it{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
   color:#9cc2ee;}
 .facts{display:inline-block;margin-top:31px;}
-.fact::before{content:'';width:8px;height:8px;border-radius:50%;
-  background:#fff;flex:none;box-shadow:0 0 10px rgba(255,255,255,.35);}
-.fact{display:flex;align-items:center;gap:21px;
-  font-family:'Inter',sans-serif;font-weight:500;color:#f4f7fb;
+.fact{display:flex;align-items:baseline;gap:20px;
+  font-family:'Playfair',serif;font-weight:500;color:#f4f7fb;
   font-size:29px;line-height:1;padding:14px 0;
   text-shadow:0 1px 12px rgba(0,0,0,.55);}
+.fact .fn{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
+  color:#9cc2ee;font-size:23px;letter-spacing:.06em;flex:none;min-width:39px;}
 .row{display:flex;align-items:center;gap:26px;margin-top:37px;flex-wrap:nowrap;}
 .cta{font-family:'Inter',sans-serif;font-weight:600;color:#0a1428;background:#f2f6fc;
   font-size:22px;letter-spacing:.10em;padding:21px 42px;border-radius:8px;white-space:nowrap;}
 .tp{display:flex;align-items:center;gap:12px;}
 .tp img{height:27px;display:block;}
 .tp span{font-family:'Inter',sans-serif;color:rgba(255,255,255,.88);font-size:23px;white-space:nowrap;}
-.lt{position:absolute;right:68px;bottom:76px;display:flex;}
+.lt{position:absolute;right:68px;bottom:205px;display:flex;}
 .lt .tx{padding:0;text-align:right;}
 .lt .n{font-family:'Inter',sans-serif;font-weight:600;color:#fff;
   font-size:25px;letter-spacing:.01em;white-space:nowrap;
@@ -56,9 +56,9 @@ h1 .it{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
     <div class="logo"><img src="../assets/lla_logo_oneline.png"></div>
     <h1><span class="l1">Your Longevity Protocol.</span><span class="it">Made Personal.</span></h1>
     <div class="facts">
-      <div class="fact">Join 18 live sessions. Small groups of 8-15.</div>
-      <div class="fact">Master the Six Pillars of longevity.</div>
-      <div class="fact">Get your written longevity protocol.</div>
+      <div class="fact"><span class="fn">01</span>Join 18 live sessions. Small groups of 8-15.</div>
+      <div class="fact"><span class="fn">02</span>Master the Six Pillars of longevity.</div>
+      <div class="fact"><span class="fn">03</span>Get your written longevity protocol.</div>
     </div>
     <div class="row">
       <div class="cta">ENROLL NOW</div>

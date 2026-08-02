@@ -14,7 +14,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#0a1020;}
 .scrim-t{position:absolute;left:0;right:0;top:0;height:26%;
   background:linear-gradient(to bottom,rgba(6,10,20,.80) 0%,rgba(6,10,20,.35) 55%,rgba(6,10,20,0) 100%);}
 .content{position:absolute;left:72px;right:72px;bottom:72px;}
-.logo{width:690px;margin-bottom:32px;}
+.logo{width:620px;margin-bottom:32px;}
 .logo img{width:100%;display:block;}
 .eyebrow{font-family:'Inter',sans-serif;font-weight:500;color:rgba(255,255,255,.82);
   font-size:24px;margin-bottom:21px;letter-spacing:.02em;white-space:nowrap;}
@@ -24,12 +24,12 @@ h1 span{display:block;white-space:nowrap;}
 h1 .it{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
   color:#9cc2ee;}
 .facts{display:inline-block;margin-top:33px;}
-.fact::before{content:'';width:9px;height:9px;border-radius:50%;
-  background:#fff;flex:none;box-shadow:0 0 10px rgba(255,255,255,.35);}
-.fact{display:flex;align-items:center;gap:22px;
-  font-family:'Inter',sans-serif;font-weight:500;color:#f4f7fb;
+.fact{display:flex;align-items:baseline;gap:21px;
+  font-family:'Playfair',serif;font-weight:500;color:#f4f7fb;
   font-size:30px;line-height:1;padding:15px 0;
   text-shadow:0 1px 12px rgba(0,0,0,.55);}
+.fact .fn{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
+  color:#9cc2ee;font-size:24px;letter-spacing:.06em;flex:none;min-width:40px;}
 .row{display:flex;align-items:center;gap:26px;margin-top:39px;flex-wrap:nowrap;}
 .cta{font-family:'Inter',sans-serif;font-weight:600;color:#0a1428;background:#f2f6fc;
   font-size:23px;letter-spacing:.10em;padding:22px 44px;border-radius:8px;white-space:nowrap;}
@@ -56,9 +56,9 @@ h1 .it{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
     <div class="logo"><img src="../assets/lla_logo_oneline.png"></div>
     <h1><span class="l1">Your Longevity Protocol.</span><span class="it">Made Personal.</span></h1>
     <div class="facts">
-      <div class="fact">Join 18 live sessions. Small groups of 8-15.</div>
-      <div class="fact">Master the Six Pillars of longevity.</div>
-      <div class="fact">Get your written longevity protocol.</div>
+      <div class="fact"><span class="fn">01</span>Join 18 live sessions. Small groups of 8-15.</div>
+      <div class="fact"><span class="fn">02</span>Master the Six Pillars of longevity.</div>
+      <div class="fact"><span class="fn">03</span>Get your written longevity protocol.</div>
     </div>
     <div class="row">
       <div class="cta">ENROLL NOW</div>
