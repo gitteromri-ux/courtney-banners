@@ -54,7 +54,7 @@ SIZES = {
                   tpi=28, tps=24, eyeb=24, mk=9, ltn=22, ltr=17,
                   ltpos='right:72px;top:1420px;', plate=PLATE_PT, op='50% 20%'),
     '191x1': dict(w=1200, h=628,  label='1.91:1 Link',  note='FB Link Ad / Marketplace',
-                  pad=44, padb=64,  logo=320, h1=68,  cred=18,
+                  pad=44, padb=64,  logo=320, h1=68,  cred=18, horiz=True,
                   tpi=18, tps=15, eyeb=16, mk=6, ltn=15, ltr=12,
                   ltpos='right:44px;bottom:135px;', plate=PLATE_LS, op='60% 28%'),
 }
@@ -95,7 +95,8 @@ h1 .it{{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
   text-shadow:0 1px 12px rgba(0,0,0,.55);}}
 .fact .fn{{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
   color:{BLUE};font-size:{int(c['cred'] * 0.95)}px;letter-spacing:.08em;flex:none;min-width:{int(c['cred'] * 1.35)}px;}}
-.stats{{display:flex;gap:{int(c['cred'] * 2.4)}px;margin-top:{int(c['cred'] * 1.15)}px;}}
+.fs{{display:{'flex' if c.get('horiz') else 'block'};{'align-items:center;gap:' + str(int(c['cred'] * 3.4)) + 'px;' if c.get('horiz') else ''}}}
+.stats{{display:flex;gap:{int(c['cred'] * 2.4)}px;margin-top:{0 if c.get('horiz') else int(c['cred'] * 1.15)}px;}}
 .sl{{font-family:'Inter',sans-serif;font-weight:600;font-size:{int(c['cred'] * 0.58)}px;
   letter-spacing:.18em;color:rgba(244,247,251,.55);white-space:nowrap;}}
 .sv{{display:flex;align-items:center;gap:{int(c['cred'] * 0.42)}px;margin-top:{int(c['cred'] * 0.3)}px;
@@ -126,6 +127,7 @@ h1 .it{{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
   <div class="content">
     <div class="logo"><img src="../assets/lla_logo_oneline.png"></div>
     <h1><span class="l1">{l1}</span><span class="it">{l2}</span></h1>
+    <div class="fs">
     <div class="facts">
       <div class="fact"><span class="fn">01</span>Master the Six Pillars of longevity.</div>
       <div class="fact"><span class="fn">02</span>Get your written longevity protocol.</div>
@@ -133,6 +135,7 @@ h1 .it{{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
     <div class="stats">
       <div class="st"><div class="sl">LIVE SESSIONS</div><div class="sv"><span class="cdot"></span>18</div></div>
       <div class="st"><div class="sl">SMALL GROUPS</div><div class="sv">8&#8211;15</div></div>
+    </div>
     </div>
     <div class="row">
       <div class="tp"><img src="../assets/tp_stars-5.svg"><span>4.6 on Trustpilot</span></div>
