@@ -42,19 +42,19 @@ BANNERS = [
 
 SIZES = {
     '1x1':   dict(w=1080, h=1080, label='1:1 Feed',     note='Instagram Post / FB Feed Square',
-                  pad=64, logo=370, h1=100, cred=24, cta=21, ctap='20px 40px',
+                  pad=64, logo=520, h1=112, cred=28, cta=21, ctap='20px 40px',
                   tpi=26, tps=22, eyeb=22, mk=8, ltn=24, ltr=19,
                   ltpos='right:64px;bottom:196px;', plate=PLATE_SQ, op='70% 24%'),
     '4x5':   dict(w=1080, h=1350, label='4:5 Vertical', note='Instagram / FB Feed Vertical',
-                  pad=68, logo=380, h1=106, cred=25, cta=22, ctap='21px 42px',
+                  pad=68, logo=540, h1=120, cred=29, cta=22, ctap='21px 42px',
                   tpi=27, tps=23, eyeb=23, mk=8, ltn=25, ltr=20,
                   ltpos='right:68px;bottom:210px;', plate=PLATE_45, op='68% 16%'),
     '9x16':  dict(w=1080, h=1920, label='9:16 Story',   note='IG Stories, Reels, FB Stories',
-                  pad=72, logo=390, h1=112, cred=26, cta=23, ctap='22px 44px',
+                  pad=72, logo=560, h1=126, cred=30, cta=23, ctap='22px 44px',
                   tpi=28, tps=24, eyeb=24, mk=9, ltn=26, ltr=21,
-                  ltpos='left:72px;top:960px;', plate=PLATE_PT, op='50% 20%'),
+                  ltpos='left:72px;top:850px;', plate=PLATE_PT, op='50% 20%'),
     '191x1': dict(w=1200, h=628,  label='1.91:1 Link',  note='FB Link Ad / Marketplace',
-                  pad=44, logo=250, h1=64,  cred=17, cta=15, ctap='13px 28px',
+                  pad=44, logo=300, h1=68,  cred=18, cta=15, ctap='13px 28px',
                   tpi=18, tps=15, eyeb=16, mk=6, ltn=17, ltr=14,
                   ltpos='right:44px;bottom:36px;', plate=PLATE_LS, op='60% 28%'),
 }
@@ -79,7 +79,7 @@ html,body{{width:{c['w']}px;height:{c['h']}px;overflow:hidden;background:#0a1020
 .scrim-t{{position:absolute;left:0;right:0;top:0;height:26%;
   background:linear-gradient(to bottom,rgba(6,10,20,.80) 0%,rgba(6,10,20,.35) 55%,rgba(6,10,20,0) 100%);}}
 .content{{position:absolute;left:{c['pad']}px;right:{c['pad']}px;bottom:{c['pad']}px;}}
-.logo{{width:{c['logo']}px;margin-bottom:{int(c['eyeb'] * 0.7)}px;}}
+.logo{{width:{c['logo']}px;margin-bottom:{int(c['h1'] * 0.26)}px;}}
 .logo img{{width:100%;display:block;}}
 .eyebrow{{font-family:'Inter',sans-serif;font-weight:500;color:rgba(255,255,255,.82);
   font-size:{c['eyeb']}px;margin-bottom:{int(c['eyeb'] * 0.9)}px;letter-spacing:.02em;white-space:nowrap;}}
@@ -93,7 +93,7 @@ h1 .it{{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
   background:linear-gradient(90deg,rgba(45,82,148,.30),rgba(45,82,148,0) 88%);
   padding:{int(c['cred'] * 0.35)}px {int(c['cred'] * 1.6)}px {int(c['cred'] * 0.35)}px {int(c['cred'] * 0.95)}px;}}
 .fact{{display:flex;align-items:center;gap:{int(c['cred'] * 0.6)}px;
-  font-family:'Inter',sans-serif;font-weight:500;color:#eef4fd;
+  font-family:'Inter',sans-serif;font-weight:500;color:#9cc2ee;
   font-size:{c['cred']}px;line-height:1;padding:{int(c['cred'] * 0.52)}px 0;}}
 .fact + .fact{{border-top:1px solid rgba(150,180,230,.28);}}
 .fact .m{{width:{c['mk']}px;height:{c['mk']}px;background:{BLUE_ACC};transform:rotate(45deg);flex:none;}}
@@ -121,7 +121,6 @@ h1 .it{{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
   </div></div>
   <div class="content">
     <div class="logo"><img src="../assets/lla_logo_oneline.png"></div>
-    <div class="eyebrow">Live Online Longevity Course</div>
     <h1><span class="l1">{l1}</span><span class="it">{l2}</span></h1>
     <div class="facts">
       <div class="fact"><span class="m"></span>18 live sessions. Cohorts of 8-15.</div>
