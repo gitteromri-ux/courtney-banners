@@ -24,7 +24,9 @@ h1 span{display:block;white-space:nowrap;}
 h1 .it{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
   color:#9cc2ee;}
 .facts{display:inline-block;margin-top:19px;}
-.fact{display:flex;align-items:center;gap:10px;
+.fact::before{content:'';width:6px;height:6px;border-radius:50%;
+  background:#fff;flex:none;box-shadow:0 0 10px rgba(255,255,255,.35);}
+.fact{display:flex;align-items:center;gap:13px;
   font-family:'Inter',sans-serif;font-weight:500;color:#f4f7fb;
   font-size:18px;line-height:1;padding:9px 0;
   text-shadow:0 1px 12px rgba(0,0,0,.55);}
@@ -35,7 +37,7 @@ h1 .it{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
 .tp img{height:18px;display:block;}
 .tp span{font-family:'Inter',sans-serif;color:rgba(255,255,255,.88);font-size:15px;white-space:nowrap;}
 .lt{position:absolute;right:44px;bottom:36px;display:flex;}
-.lt .tx{padding:0;}
+.lt .tx{padding:0;text-align:right;}
 .lt .n{font-family:'Inter',sans-serif;font-weight:600;color:#fff;
   font-size:17px;letter-spacing:.01em;white-space:nowrap;
   text-shadow:0 2px 16px rgba(0,0,0,.65),0 1px 4px rgba(0,0,0,.55);}
@@ -54,9 +56,9 @@ h1 .it{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
     <div class="logo"><img src="../assets/lla_logo_oneline.png"></div>
     <h1><span class="l1">The Longevity Course,</span><span class="it">Taught Live.</span></h1>
     <div class="facts">
-      <div class="fact">18 live sessions. Small groups of 8-15.</div>
-      <div class="fact">The Six Pillars of longevity.</div>
-      <div class="fact">Your written longevity protocol.</div>
+      <div class="fact">Join 18 live sessions. Small groups of 8-15.</div>
+      <div class="fact">Master the Six Pillars of longevity.</div>
+      <div class="fact">Get your written longevity protocol.</div>
     </div>
     <div class="row">
       <div class="cta">ENROLL NOW</div>

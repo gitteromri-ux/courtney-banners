@@ -47,12 +47,12 @@ SIZES = {
                   ltpos='right:64px;bottom:72px;', plate=PLATE_SQ, op='70% 24%'),
     '4x5':   dict(w=1080, h=1350, label='4:5 Vertical', note='Instagram / FB Feed Vertical',
                   pad=68, logo=660, h1=120, cred=29, cta=22, ctap='21px 42px',
-                  tpi=27, tps=23, eyeb=23, mk=8, ltn=25, ltr=20,
-                  ltpos='right:68px;bottom:150px;', plate=PLATE_45, op='68% 16%'),
+                  tpi=27, tps=23, eyeb=23, mk=8, ltn=25, ltr=19,
+                  ltpos='right:68px;bottom:76px;', plate=PLATE_45, op='68% 16%'),
     '9x16':  dict(w=1080, h=1920, label='9:16 Story',   note='IG Stories, Reels, FB Stories',
                   pad=72, logo=690, h1=126, cred=30, cta=23, ctap='22px 44px',
                   tpi=28, tps=24, eyeb=24, mk=9, ltn=26, ltr=21,
-                  ltpos='left:72px;top:950px;', plate=PLATE_PT, op='50% 20%'),
+                  ltpos='right:72px;top:950px;', plate=PLATE_PT, op='50% 20%'),
     '191x1': dict(w=1200, h=628,  label='1.91:1 Link',  note='FB Link Ad / Marketplace',
                   pad=44, logo=350, h1=68,  cred=18, cta=15, ctap='13px 28px',
                   tpi=18, tps=15, eyeb=16, mk=6, ltn=17, ltr=14,
@@ -89,7 +89,9 @@ h1 span{{display:block;white-space:nowrap;}}
 h1 .it{{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
   color:{BLUE};}}
 .facts{{display:inline-block;margin-top:{int(c['cred'] * 1.1)}px;}}
-.fact{{display:flex;align-items:center;gap:{int(c['cred'] * 0.6)}px;
+.fact::before{{content:'';width:{c['mk']}px;height:{c['mk']}px;border-radius:50%;
+  background:#fff;flex:none;box-shadow:0 0 10px rgba(255,255,255,.35);}}
+.fact{{display:flex;align-items:center;gap:{int(c['cred'] * 0.75)}px;
   font-family:'Inter',sans-serif;font-weight:500;color:#f4f7fb;
   font-size:{c['cred']}px;line-height:1;padding:{int(c['cred'] * 0.5)}px 0;
   text-shadow:0 1px 12px rgba(0,0,0,.55);}}
@@ -100,7 +102,7 @@ h1 .it{{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
 .tp img{{height:{c['tpi']}px;display:block;}}
 .tp span{{font-family:'Inter',sans-serif;color:rgba(255,255,255,.88);font-size:{c['tps']}px;white-space:nowrap;}}
 .lt{{position:absolute;{c['ltpos']}display:flex;}}
-.lt .tx{{padding:0;}}
+.lt .tx{{padding:0;text-align:right;}}
 .lt .n{{font-family:'Inter',sans-serif;font-weight:600;color:#fff;
   font-size:{c['ltn']}px;letter-spacing:.01em;white-space:nowrap;
   text-shadow:0 2px 16px rgba(0,0,0,.65),0 1px 4px rgba(0,0,0,.55);}}
@@ -119,9 +121,9 @@ h1 .it{{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
     <div class="logo"><img src="../assets/lla_logo_oneline.png"></div>
     <h1><span class="l1">{l1}</span><span class="it">{l2}</span></h1>
     <div class="facts">
-      <div class="fact">18 live sessions. Small groups of 8-15.</div>
-      <div class="fact">The Six Pillars of longevity.</div>
-      <div class="fact">Your written longevity protocol.</div>
+      <div class="fact">Join 18 live sessions. Small groups of 8-15.</div>
+      <div class="fact">Master the Six Pillars of longevity.</div>
+      <div class="fact">Get your written longevity protocol.</div>
     </div>
     <div class="row">
       <div class="cta">ENROLL NOW</div>
