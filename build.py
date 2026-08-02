@@ -44,11 +44,11 @@ SIZES = {
     '1x1':   dict(w=1080, h=1080, label='1:1 Feed',     note='Instagram Post / FB Feed Square',
                   pad=64, logo=520, h1=112, cred=28, cta=21, ctap='20px 40px',
                   tpi=26, tps=22, eyeb=22, mk=8, ltn=24, ltr=19,
-                  ltpos='right:64px;bottom:196px;', plate=PLATE_SQ, op='70% 24%'),
+                  ltpos='right:64px;bottom:152px;', plate=PLATE_SQ, op='70% 24%'),
     '4x5':   dict(w=1080, h=1350, label='4:5 Vertical', note='Instagram / FB Feed Vertical',
                   pad=68, logo=540, h1=120, cred=29, cta=22, ctap='21px 42px',
                   tpi=27, tps=23, eyeb=23, mk=8, ltn=25, ltr=20,
-                  ltpos='right:68px;bottom:210px;', plate=PLATE_45, op='68% 16%'),
+                  ltpos='right:68px;bottom:168px;', plate=PLATE_45, op='68% 16%'),
     '9x16':  dict(w=1080, h=1920, label='9:16 Story',   note='IG Stories, Reels, FB Stories',
                   pad=72, logo=560, h1=126, cred=30, cta=23, ctap='22px 44px',
                   tpi=28, tps=24, eyeb=24, mk=9, ltn=26, ltr=21,
@@ -88,14 +88,14 @@ h1{{font-family:'Playfair',serif;font-weight:700;color:#fff;
 h1 span{{display:block;white-space:nowrap;}}
 h1 .it{{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
   color:{BLUE};}}
-.facts{{display:inline-block;margin-top:{int(c['cred'] * 1.1)}px;
-  border-left:3px solid {BLUE_ACC};
-  background:linear-gradient(90deg,rgba(45,82,148,.30),rgba(45,82,148,0) 88%);
-  padding:{int(c['cred'] * 0.35)}px {int(c['cred'] * 1.6)}px {int(c['cred'] * 0.35)}px {int(c['cred'] * 0.95)}px;}}
+.facts{{display:inline-block;margin-top:{int(c['cred'] * 1.1)}px;}}
 .fact{{display:flex;align-items:center;gap:{int(c['cred'] * 0.6)}px;
-  font-family:'Inter',sans-serif;font-weight:500;color:#9cc2ee;
-  font-size:{c['cred']}px;line-height:1;padding:{int(c['cred'] * 0.52)}px 0;}}
-.fact .m{{width:{c['mk']}px;height:{c['mk']}px;background:{BLUE_ACC};transform:rotate(45deg);flex:none;}}
+  font-family:'Inter',sans-serif;font-weight:500;color:#f4f7fb;
+  font-size:{c['cred']}px;line-height:1;padding:{int(c['cred'] * 0.5)}px 0;
+  text-shadow:0 1px 12px rgba(0,0,0,.55);}}
+.fact .m{{width:{int(c['mk'] * 0.9)}px;height:{int(c['mk'] * 1.5)}px;border:solid #fff;
+  border-width:0 3px 3px 0;transform:rotate(45deg);flex:none;
+  margin-top:-{int(c['mk'] * 0.45)}px;margin-right:{int(c['mk'] * 0.4)}px;}}
 .row{{display:flex;align-items:center;gap:26px;margin-top:{int(c['cred'] * 1.3)}px;flex-wrap:nowrap;}}
 .cta{{font-family:'Inter',sans-serif;font-weight:600;color:{INK};background:#f2f6fc;
   font-size:{c['cta']}px;letter-spacing:.10em;padding:{c['ctap']};border-radius:8px;white-space:nowrap;}}
@@ -103,13 +103,14 @@ h1 .it{{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
 .tp img{{height:{c['tpi']}px;display:block;}}
 .tp span{{font-family:'Inter',sans-serif;color:rgba(255,255,255,.88);font-size:{c['tps']}px;white-space:nowrap;}}
 .lt{{position:absolute;{c['ltpos']}display:flex;}}
-.lt .bar{{width:4px;background:{BLUE_ACC};flex:none;}}
-.lt .tx{{background:linear-gradient(90deg,rgba(8,14,28,.74),rgba(8,14,28,.38));
-  padding:{int(c['ltn'] * 0.55)}px {int(c['ltn'] * 1.1)}px {int(c['ltn'] * 0.6)}px {int(c['ltn'] * 0.8)}px;}}
+.lt .bar{{width:3px;background:#fff;flex:none;box-shadow:0 1px 10px rgba(0,0,0,.45);}}
+.lt .tx{{padding:{int(c['ltn'] * 0.15)}px 0 {int(c['ltn'] * 0.15)}px {int(c['ltn'] * 0.7)}px;}}
 .lt .n{{font-family:'Inter',sans-serif;font-weight:600;color:#fff;
-  font-size:{c['ltn']}px;letter-spacing:.01em;white-space:nowrap;}}
-.lt .r{{font-family:'Inter',sans-serif;font-weight:400;color:{BLUE};
-  font-size:{c['ltr']}px;margin-top:{int(c['ltr'] * 0.35)}px;letter-spacing:.03em;white-space:nowrap;}}
+  font-size:{c['ltn']}px;letter-spacing:.01em;white-space:nowrap;
+  text-shadow:0 2px 16px rgba(0,0,0,.65),0 1px 4px rgba(0,0,0,.55);}}
+.lt .r{{font-family:'Inter',sans-serif;font-weight:400;color:rgba(255,255,255,.78);
+  font-size:{c['ltr']}px;margin-top:{int(c['ltr'] * 0.35)}px;letter-spacing:.03em;white-space:nowrap;
+  text-shadow:0 2px 16px rgba(0,0,0,.65),0 1px 4px rgba(0,0,0,.55);}}
 </style></head><body>
 <div class="stage">
   <img class="bg" src="../{c['plate']}">
