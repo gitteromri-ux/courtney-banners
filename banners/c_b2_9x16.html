@@ -9,15 +9,15 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#0a1020;}
 .stage{position:relative;width:1080px;height:1920px;overflow:hidden;}
 .stage img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%;}
 .scrim-s{position:absolute;inset:0;background:linear-gradient(to right,rgba(6,10,20,0.55) 0%,rgba(6,10,20,0.2) 46%,rgba(6,10,20,0) 78%);}
-.scrim-b{position:absolute;left:0;right:0;bottom:0;height:70%;
+.scrim-b{position:absolute;left:0;right:0;bottom:0;height:78%;
   background:linear-gradient(to top,rgba(6,10,20,.96) 0%,rgba(6,10,20,.88) 35%,rgba(6,10,20,.55) 68%,rgba(6,10,20,0) 100%);}
 .scrim-t{position:absolute;left:0;right:0;top:0;height:26%;
   background:linear-gradient(to bottom,rgba(6,10,20,.80) 0%,rgba(6,10,20,.35) 55%,rgba(6,10,20,0) 100%);}
-.logo{position:absolute;top:72px;left:72px;width:450px;}
+.content{position:absolute;left:72px;right:72px;bottom:72px;}
+.logo{width:390px;margin-bottom:16px;}
 .logo img{width:100%;display:block;}
 .eyebrow{font-family:'Inter',sans-serif;font-weight:500;color:rgba(255,255,255,.82);
-  font-size:24px;margin-top:21px;letter-spacing:.02em;white-space:nowrap;}
-.content{position:absolute;left:72px;right:72px;bottom:72px;}
+  font-size:24px;margin-bottom:21px;letter-spacing:.02em;white-space:nowrap;}
 h1{font-family:'Playfair',serif;font-weight:700;color:#fff;
   font-size:112px;line-height:1.04;letter-spacing:-.015em;}
 h1 span{display:block;white-space:nowrap;}
@@ -38,7 +38,7 @@ h1 .it{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
 .tp{display:flex;align-items:center;gap:12px;}
 .tp img{height:28px;display:block;}
 .tp span{font-family:'Inter',sans-serif;color:rgba(255,255,255,.88);font-size:24px;white-space:nowrap;}
-.lt{position:absolute;left:72px;top:1120px;display:flex;}
+.lt{position:absolute;left:72px;top:960px;display:flex;}
 .lt .bar{width:4px;background:#5d92dd;flex:none;}
 .lt .tx{background:linear-gradient(90deg,rgba(8,14,28,.74),rgba(8,14,28,.38));
   padding:14px 28px 15px 20px;}
@@ -50,12 +50,13 @@ h1 .it{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
 <div class="stage">
   <img class="bg" src="../assets/composites/courtney_realset_pt.png">
   <div class="scrim-t"></div><div class="scrim-s"></div><div class="scrim-b"></div>
-  <div class="logo"><img src="../assets/lla_logo_oneline.png"><div class="eyebrow">Live Online Longevity Course</div></div>
   <div class="lt"><div class="bar"></div><div class="tx">
     <div class="n">Taught live by Courtney</div>
     <div class="r">Longevity Life Academy Instructor</div>
   </div></div>
   <div class="content">
+    <div class="logo"><img src="../assets/lla_logo_oneline.png"></div>
+    <div class="eyebrow">Live Online Longevity Course</div>
     <h1><span class="l1">Your Longevity Protocol.</span><span class="it">Made Personal.</span></h1>
     <div class="facts">
       <div class="fact"><span class="m"></span>18 live sessions. Cohorts of 8-15.</div>

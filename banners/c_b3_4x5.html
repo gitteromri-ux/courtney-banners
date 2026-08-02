@@ -9,15 +9,15 @@ html,body{width:1080px;height:1350px;overflow:hidden;background:#0a1020;}
 .stage{position:relative;width:1080px;height:1350px;overflow:hidden;}
 .stage img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:68% 16%;}
 .scrim-s{position:absolute;inset:0;background:linear-gradient(to right,rgba(6,10,20,0.55) 0%,rgba(6,10,20,0.2) 46%,rgba(6,10,20,0) 78%);}
-.scrim-b{position:absolute;left:0;right:0;bottom:0;height:70%;
+.scrim-b{position:absolute;left:0;right:0;bottom:0;height:78%;
   background:linear-gradient(to top,rgba(6,10,20,.96) 0%,rgba(6,10,20,.88) 35%,rgba(6,10,20,.55) 68%,rgba(6,10,20,0) 100%);}
 .scrim-t{position:absolute;left:0;right:0;top:0;height:26%;
   background:linear-gradient(to bottom,rgba(6,10,20,.80) 0%,rgba(6,10,20,.35) 55%,rgba(6,10,20,0) 100%);}
-.logo{position:absolute;top:68px;left:68px;width:440px;}
+.content{position:absolute;left:68px;right:68px;bottom:68px;}
+.logo{width:380px;margin-bottom:16px;}
 .logo img{width:100%;display:block;}
 .eyebrow{font-family:'Inter',sans-serif;font-weight:500;color:rgba(255,255,255,.82);
-  font-size:23px;margin-top:20px;letter-spacing:.02em;white-space:nowrap;}
-.content{position:absolute;left:68px;right:68px;bottom:68px;}
+  font-size:23px;margin-bottom:20px;letter-spacing:.02em;white-space:nowrap;}
 h1{font-family:'Playfair',serif;font-weight:700;color:#fff;
   font-size:106px;line-height:1.04;letter-spacing:-.015em;}
 h1 span{display:block;white-space:nowrap;}
@@ -50,12 +50,13 @@ h1 .it{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
 <div class="stage">
   <img class="bg" src="../assets/composites/courtney_realset_45.png">
   <div class="scrim-t"></div><div class="scrim-s"></div><div class="scrim-b"></div>
-  <div class="logo"><img src="../assets/lla_logo_oneline.png"><div class="eyebrow">Live Online Longevity Course</div></div>
   <div class="lt"><div class="bar"></div><div class="tx">
     <div class="n">Taught live by Courtney</div>
     <div class="r">Longevity Life Academy Instructor</div>
   </div></div>
   <div class="content">
+    <div class="logo"><img src="../assets/lla_logo_oneline.png"></div>
+    <div class="eyebrow">Live Online Longevity Course</div>
     <h1><span class="l1">Decode Your Biomarkers.</span><span class="it">Extend Your Life.</span></h1>
     <div class="facts">
       <div class="fact"><span class="m"></span>18 live sessions. Cohorts of 8-15.</div>

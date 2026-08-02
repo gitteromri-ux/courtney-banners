@@ -42,19 +42,19 @@ BANNERS = [
 
 SIZES = {
     '1x1':   dict(w=1080, h=1080, label='1:1 Feed',     note='Instagram Post / FB Feed Square',
-                  pad=64, logo=430, h1=100, cred=24, cta=21, ctap='20px 40px',
+                  pad=64, logo=370, h1=100, cred=24, cta=21, ctap='20px 40px',
                   tpi=26, tps=22, eyeb=22, mk=8, ltn=24, ltr=19,
                   ltpos='right:64px;bottom:196px;', plate=PLATE_SQ, op='70% 24%'),
     '4x5':   dict(w=1080, h=1350, label='4:5 Vertical', note='Instagram / FB Feed Vertical',
-                  pad=68, logo=440, h1=106, cred=25, cta=22, ctap='21px 42px',
+                  pad=68, logo=380, h1=106, cred=25, cta=22, ctap='21px 42px',
                   tpi=27, tps=23, eyeb=23, mk=8, ltn=25, ltr=20,
                   ltpos='right:68px;bottom:210px;', plate=PLATE_45, op='68% 16%'),
     '9x16':  dict(w=1080, h=1920, label='9:16 Story',   note='IG Stories, Reels, FB Stories',
-                  pad=72, logo=450, h1=112, cred=26, cta=23, ctap='22px 44px',
+                  pad=72, logo=390, h1=112, cred=26, cta=23, ctap='22px 44px',
                   tpi=28, tps=24, eyeb=24, mk=9, ltn=26, ltr=21,
-                  ltpos='left:72px;top:1120px;', plate=PLATE_PT, op='50% 20%'),
+                  ltpos='left:72px;top:960px;', plate=PLATE_PT, op='50% 20%'),
     '191x1': dict(w=1200, h=628,  label='1.91:1 Link',  note='FB Link Ad / Marketplace',
-                  pad=44, logo=310, h1=64,  cred=17, cta=15, ctap='13px 28px',
+                  pad=44, logo=250, h1=64,  cred=17, cta=15, ctap='13px 28px',
                   tpi=18, tps=15, eyeb=16, mk=6, ltn=17, ltr=14,
                   ltpos='right:44px;bottom:36px;', plate=PLATE_LS, op='60% 28%'),
 }
@@ -74,15 +74,15 @@ html,body{{width:{c['w']}px;height:{c['h']}px;overflow:hidden;background:#0a1020
 .stage{{position:relative;width:{c['w']}px;height:{c['h']}px;overflow:hidden;}}
 .stage img.bg{{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:{c['op']};}}
 .scrim-s{{position:absolute;inset:0;background:linear-gradient(to right,rgba(6,10,20,0.55) 0%,rgba(6,10,20,0.2) 46%,rgba(6,10,20,0) 78%);}}
-.scrim-b{{position:absolute;left:0;right:0;bottom:0;height:70%;
+.scrim-b{{position:absolute;left:0;right:0;bottom:0;height:78%;
   background:linear-gradient(to top,rgba(6,10,20,.96) 0%,rgba(6,10,20,.88) 35%,rgba(6,10,20,.55) 68%,rgba(6,10,20,0) 100%);}}
 .scrim-t{{position:absolute;left:0;right:0;top:0;height:26%;
   background:linear-gradient(to bottom,rgba(6,10,20,.80) 0%,rgba(6,10,20,.35) 55%,rgba(6,10,20,0) 100%);}}
-.logo{{position:absolute;top:{c['pad']}px;left:{c['pad']}px;width:{c['logo']}px;}}
+.content{{position:absolute;left:{c['pad']}px;right:{c['pad']}px;bottom:{c['pad']}px;}}
+.logo{{width:{c['logo']}px;margin-bottom:{int(c['eyeb'] * 0.7)}px;}}
 .logo img{{width:100%;display:block;}}
 .eyebrow{{font-family:'Inter',sans-serif;font-weight:500;color:rgba(255,255,255,.82);
-  font-size:{c['eyeb']}px;margin-top:{int(c['eyeb'] * 0.9)}px;letter-spacing:.02em;white-space:nowrap;}}
-.content{{position:absolute;left:{c['pad']}px;right:{c['pad']}px;bottom:{c['pad']}px;}}
+  font-size:{c['eyeb']}px;margin-bottom:{int(c['eyeb'] * 0.9)}px;letter-spacing:.02em;white-space:nowrap;}}
 h1{{font-family:'Playfair',serif;font-weight:700;color:#fff;
   font-size:{c['h1']}px;line-height:1.04;letter-spacing:-.015em;}}
 h1 span{{display:block;white-space:nowrap;}}
@@ -115,12 +115,13 @@ h1 .it{{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
 <div class="stage">
   <img class="bg" src="../{c['plate']}">
   <div class="scrim-t"></div><div class="scrim-s"></div><div class="scrim-b"></div>
-  <div class="logo"><img src="../assets/lla_logo_oneline.png"><div class="eyebrow">Live Online Longevity Course</div></div>
   <div class="lt"><div class="bar"></div><div class="tx">
     <div class="n">Taught live by Courtney</div>
     <div class="r">Longevity Life Academy Instructor</div>
   </div></div>
   <div class="content">
+    <div class="logo"><img src="../assets/lla_logo_oneline.png"></div>
+    <div class="eyebrow">Live Online Longevity Course</div>
     <h1><span class="l1">{l1}</span><span class="it">{l2}</span></h1>
     <div class="facts">
       <div class="fact"><span class="m"></span>18 live sessions. Cohorts of 8-15.</div>
