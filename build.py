@@ -95,7 +95,6 @@ h1 .it{{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
 .fact{{display:flex;align-items:center;gap:{int(c['cred'] * 0.6)}px;
   font-family:'Inter',sans-serif;font-weight:500;color:#9cc2ee;
   font-size:{c['cred']}px;line-height:1;padding:{int(c['cred'] * 0.52)}px 0;}}
-.fact + .fact{{border-top:1px solid rgba(150,180,230,.28);}}
 .fact .m{{width:{c['mk']}px;height:{c['mk']}px;background:{BLUE_ACC};transform:rotate(45deg);flex:none;}}
 .row{{display:flex;align-items:center;gap:26px;margin-top:{int(c['cred'] * 1.3)}px;flex-wrap:nowrap;}}
 .cta{{font-family:'Inter',sans-serif;font-weight:600;color:{INK};background:#f2f6fc;
