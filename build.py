@@ -44,19 +44,19 @@ SIZES = {
     '1x1':   dict(w=1080, h=1080, label='1:1 Feed',     note='Instagram Post / FB Feed Square',
                   pad=64, logo=580, h1=112, cred=28, cta=21, ctap='20px 40px',
                   tpi=26, tps=22, eyeb=22, mk=8, ltn=24, ltr=19,
-                  ltpos='right:64px;bottom:150px;', plate=PLATE_SQ, op='70% 24%'),
+                  ltpos='right:64px;bottom:64px;', plate=PLATE_SQ, op='70% 24%'),
     '4x5':   dict(w=1080, h=1350, label='4:5 Vertical', note='Instagram / FB Feed Vertical',
                   pad=68, logo=600, h1=120, cred=29, cta=22, ctap='21px 42px',
                   tpi=27, tps=23, eyeb=23, mk=8, ltn=25, ltr=19,
-                  ltpos='right:68px;bottom:160px;', plate=PLATE_45, op='68% 16%'),
+                  ltpos='right:68px;bottom:68px;', plate=PLATE_45, op='68% 16%'),
     '9x16':  dict(w=1080, h=1920, label='9:16 Story',   note='IG Stories, Reels, FB Stories',
                   pad=72, logo=620, h1=126, cred=30, cta=23, ctap='22px 44px',
                   tpi=28, tps=24, eyeb=24, mk=9, ltn=26, ltr=21,
-                  ltpos='right:72px;top:1010px;', plate=PLATE_PT, op='50% 20%'),
+                  ltpos='right:72px;top:940px;', plate=PLATE_PT, op='50% 20%'),
     '191x1': dict(w=1200, h=628,  label='1.91:1 Link',  note='FB Link Ad / Marketplace',
                   pad=44, logo=320, h1=68,  cred=18, cta=15, ctap='13px 28px',
                   tpi=18, tps=15, eyeb=16, mk=6, ltn=17, ltr=14,
-                  ltpos='right:44px;bottom:110px;', plate=PLATE_LS, op='60% 28%'),
+                  ltpos='right:44px;bottom:44px;', plate=PLATE_LS, op='60% 28%'),
 }
 
 
@@ -95,8 +95,14 @@ h1 .it{{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
   text-shadow:0 1px 12px rgba(0,0,0,.55);}}
 .fact .fn{{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
   color:{BLUE};font-size:{int(c['cred'] * 0.95)}px;letter-spacing:.08em;flex:none;min-width:{int(c['cred'] * 1.35)}px;}}
-.fact.fcta{{color:{BLUE};}}
-.fact.fcta .fn{{color:#fff;}}
+.fact.fcta{{align-items:center;margin-top:{int(c['cred'] * 0.3)}px;}}
+.chip{{display:inline-flex;align-items:center;gap:{int(c['cred'] * 0.55)}px;
+  padding:{int(c['cred'] * 0.52)}px {int(c['cred'] * 0.85)}px;border-radius:{int(c['cred'] * 0.55)}px;
+  background:linear-gradient(135deg,rgba(93,146,221,.20),rgba(93,146,221,.06));
+  border:1px solid rgba(156,194,238,.45);box-shadow:0 0 26px rgba(93,146,221,.30);
+  font-family:'Inter',sans-serif;font-weight:500;color:#e9f2fd;font-size:{c['cred']}px;}}
+.cdot{{width:{int(c['cred'] * 0.34)}px;height:{int(c['cred'] * 0.34)}px;border-radius:50%;flex:none;
+  background:#5d92dd;box-shadow:0 0 12px rgba(93,146,221,.9);}}
 .row{{display:flex;align-items:center;gap:26px;margin-top:{int(c['cred'] * 1.3)}px;flex-wrap:nowrap;}}
 .cta{{font-family:'Inter',sans-serif;font-weight:600;color:{INK};background:#f2f6fc;
   font-size:{c['cta']}px;letter-spacing:.10em;padding:{c['ctap']};border-radius:8px;white-space:nowrap;}}
@@ -116,7 +122,7 @@ h1 .it{{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
   <img class="bg" src="../{c['plate']}">
   <div class="scrim-t"></div><div class="scrim-s"></div><div class="scrim-b"></div>
   <div class="lt"><div class="tx">
-    <div class="n">Taught live by Courtney</div>
+    <div class="n">Courtney Donofrio</div>
     <div class="r">Longevity Life Academy Instructor</div>
   </div></div>
   <div class="content">
@@ -125,7 +131,7 @@ h1 .it{{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
     <div class="facts">
       <div class="fact"><span class="fn">01</span>Master the Six Pillars of longevity.</div>
       <div class="fact"><span class="fn">02</span>Get your written longevity protocol.</div>
-      <div class="fact fcta"><span class="fn">03</span>Join 18 live sessions. Small groups of 8-15.</div>
+      <div class="fact fcta"><span class="fn">03</span><span class="chip"><span class="cdot"></span>Join 18 live sessions. Small groups of 8-15.</span></div>
     </div>
     <div class="row">
       <div class="cta">ENROLL NOW</div>
