@@ -25,13 +25,11 @@ SIZES = [
     ('191x1', 1200,  628, '1.91:1 Link',  'FB Link Ad / Marketplace'),
 ]
 
-LUX_V1 = 'assets/composites/courtney_lux_v1.png'  # 3:4 portrait, turtleneck
-LUX_V2 = 'assets/composites/courtney_lux_v2.png'  # 16:9 subject right
-LUX_V3 = 'assets/composites/courtney_lux_v3.png'  # 9:16 vertical
-WIDE_LS = 'assets/composites/courtney_wideset_v1.png'  # 16:9 wide library, subject right
-WIDE_PT = 'assets/composites/courtney_wideset_v2.png'  # 9:16 wide library, subject center
-WIDE_SQ = 'assets/composites/courtney_wideset_1x1.png'  # 1:1 wide library, subject right
-WIDE_45 = 'assets/composites/courtney_wideset_4x5.png'  # 3:4 wide library, subject right
+# V12 — real production set plates (walnut library, leather chair, camera rig)
+WIDE_LS = 'assets/composites/courtney_realset_ls.png'  # 16:9 real set, subject right
+WIDE_PT = 'assets/composites/courtney_realset_pt.png'  # 9:16 real set, subject center, face high
+WIDE_SQ = 'assets/composites/courtney_realset_sq.png'  # 1:1 real set, subject right
+WIDE_45 = 'assets/composites/courtney_realset_45.png'  # 3:4 real set, subject right
 
 BANNERS = [
     {'id': 'c_b1', 'title': 'Live Longer. Learn How.',
@@ -126,13 +124,13 @@ def render_banner(b, size_key, w, h, idx):
     # Left side gets a soft dark scrim behind text; top and bottom get gentle fades for logo/CTA legibility.
     if mode == 'side':
         vignette = ("background:"
-                    "linear-gradient(97deg, rgba(6,11,26,.92) 0%, rgba(8,14,30,.78) 22%, "
-                    "rgba(10,16,32,.42) 40%, rgba(12,18,32,.10) 56%, rgba(12,18,32,0) 66%),"
-                    "linear-gradient(180deg, rgba(6,11,26,.68) 0%, rgba(6,11,26,0) 20%),"
-                    "linear-gradient(180deg, rgba(6,11,26,0) 55%, rgba(6,11,26,.62) 100%);")
+                    "linear-gradient(97deg, rgba(14,9,5,.92) 0%, rgba(16,11,6,.78) 22%, "
+                    "rgba(18,12,7,.42) 40%, rgba(18,12,7,.10) 56%, rgba(18,12,7,0) 66%),"
+                    "linear-gradient(180deg, rgba(14,9,5,.68) 0%, rgba(14,9,5,0) 20%),"
+                    "linear-gradient(180deg, rgba(14,9,5,0) 55%, rgba(14,9,5,.62) 100%);")
     else:
-        vignette = ("background:linear-gradient(180deg, rgba(6,11,26,.68) 0%, rgba(6,11,26,.15) 18%, "
-                    "rgba(6,11,26,0) 30%, rgba(6,11,26,.15) 55%, rgba(6,11,26,.78) 74%, rgba(4,8,22,.95) 100%);")
+        vignette = ("background:linear-gradient(180deg, rgba(14,9,5,.68) 0%, rgba(14,9,5,.15) 18%, "
+                    "rgba(14,9,5,0) 30%, rgba(14,9,5,.15) 55%, rgba(14,9,5,.78) 74%, rgba(10,6,3,.95) 100%);")
 
     l1 = html.escape(b['l1'])
     l2 = html.escape(b['l2'])
@@ -142,35 +140,35 @@ def render_banner(b, size_key, w, h, idx):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  html,body{{margin:0;padding:0;background:#060b20;overflow:hidden;font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;}}
-  .canvas{{position:relative;width:{w}px;height:{h}px;overflow:hidden;background:#060b20;}}
-  .photo{{position:absolute;{photo_box}object-fit:{fit};object-position:{op};z-index:1;filter:saturate(.95) contrast(1.04) brightness(.94);background:#060b20;}}
+  html,body{{margin:0;padding:0;background:#0c0805;overflow:hidden;font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;}}
+  .canvas{{position:relative;width:{w}px;height:{h}px;overflow:hidden;background:#0c0805;}}
+  .photo{{position:absolute;{photo_box}object-fit:{fit};object-position:{op};z-index:1;filter:saturate(.98) contrast(1.03) brightness(.96);background:#0c0805;}}
   .vignette{{position:absolute;inset:0;z-index:2;{vignette}}}
   .grain{{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:.05;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/></svg>");}}
   .brand{{position:absolute;left:{side_pad}px;top:{top_pad}px;z-index:10;display:flex;flex-direction:column;gap:{max(12, int(logo_h * 0.16))}px;}}
   .brand img{{height:{logo_h}px;display:block;opacity:.99;filter:drop-shadow(0 4px 18px rgba(2,6,20,.7));}}
-  .brand .eyebrow{{font-family:'EB Garamond',serif;font-style:italic;font-weight:500;font-size:{eyebrow_size}px;color:#9cc3ef;line-height:1.25;text-shadow:0 2px 12px rgba(2,6,20,.6);}}
-  .text{{position:absolute;left:{side_pad}px;bottom:{text_bottom}px;width:{text_width}px;z-index:11;color:#f5f8fc;}}
-  .h1{{font-family:'EB Garamond',serif;font-weight:600;font-size:{h1_size}px;line-height:.98;letter-spacing:-.012em;margin:0;color:#f5f8fc;text-shadow:0 5px 34px rgba(2,6,20,.65);}}
-  .h1 .b{{font-style:italic;font-weight:500;display:block;margin-top:{max(6, int(h1_size * 0.07))}px;background:linear-gradient(103deg,#bcd8f7 0%,#8fb4e3 40%,#6fa1dd 70%,#a9cdf3 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 4px 22px rgba(2,6,20,.55));}}
-  .cred{{margin-top:{max(22, int(h1_size * 0.27))}px;font-family:'EB Garamond',serif;font-style:italic;font-weight:500;font-size:{cred_size}px;color:rgba(232,241,252,.9);line-height:1.4;}}
-  .cred .name{{font-style:normal;font-weight:700;color:#9cc3ef;}}
+  .brand .eyebrow{{font-family:'EB Garamond',serif;font-style:italic;font-weight:500;font-size:{eyebrow_size}px;color:#e9d9be;line-height:1.25;text-shadow:0 2px 12px rgba(10,6,3,.65);}}
+  .text{{position:absolute;left:{side_pad}px;bottom:{text_bottom}px;width:{text_width}px;z-index:11;color:#f7f3ec;}}
+  .h1{{font-family:'EB Garamond',serif;font-weight:600;font-size:{h1_size}px;line-height:.98;letter-spacing:-.012em;margin:0;color:#f7f3ec;text-shadow:0 5px 34px rgba(10,6,3,.7);}}
+  .h1 .b{{font-style:italic;font-weight:500;display:block;margin-top:{max(6, int(h1_size * 0.07))}px;background:linear-gradient(103deg,#f3e3c3 0%,#e6cd9d 45%,#d8b97f 75%,#eedcba 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 4px 22px rgba(10,6,3,.6));}}
+  .cred{{margin-top:{max(22, int(h1_size * 0.27))}px;font-family:'EB Garamond',serif;font-style:italic;font-weight:500;font-size:{cred_size}px;color:rgba(247,240,228,.92);line-height:1.4;}}
+  .cred .name{{font-style:normal;font-weight:700;color:#eddcb8;}}
   .offer{{margin-top:{max(10, int(h1_size * 0.13))}px;font-family:'Inter',sans-serif;font-weight:500;font-size:{offer_size}px;color:rgba(245,248,252,.95);letter-spacing:.01em;}}
   .facts{{margin-top:{max(16, int(h1_size * 0.24))}px;display:flex;flex-direction:column;gap:{max(10, int(fact_size * 0.60))}px;}}
-  .facts .f{{display:block;font-family:'Inter',sans-serif;font-weight:700;font-size:{int(fact_size * 1.15)}px;color:#8ff2ff;line-height:1.28;letter-spacing:.008em;text-shadow:0 0 6px rgba(127,231,255,.9),0 0 14px rgba(127,231,255,.7),0 0 28px rgba(90,190,255,.55),0 0 52px rgba(60,150,235,.35),0 2px 8px rgba(2,6,20,.55);}}
+  .facts .f{{display:block;font-family:'Inter',sans-serif;font-weight:600;font-size:{int(fact_size * 1.15)}px;color:#f7f3ec;line-height:1.28;letter-spacing:.008em;text-shadow:0 2px 10px rgba(10,6,3,.75);}}
   .facts .f .ck{{display:none;}}
   .actions{{margin-top:{max(30, int(h1_size * 0.40))}px;display:flex;flex-direction:column;align-items:flex-start;gap:{max(18, int(cta_size * 0.9))}px;}}
-  .cta{{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(20,34,72,.92) 0%,rgba(10,18,46,.94) 100%);color:#ffffff;font-family:'Inter',sans-serif;font-weight:600;font-size:{cta_size}px;letter-spacing:.16em;padding:{cta_pad_v}px {cta_pad_h}px;border-radius:9999px;border:2px solid rgba(158,196,242,.95);box-shadow:0 0 26px rgba(110,160,235,.5), 0 10px 34px rgba(2,6,20,.55), inset 0 0 18px rgba(110,160,235,.18);}}
+  .cta{{display:inline-flex;align-items:center;justify-content:center;background:#f2e9d8;color:#241408;font-family:'Inter',sans-serif;font-weight:700;font-size:{cta_size}px;letter-spacing:.14em;padding:{cta_pad_v}px {cta_pad_h}px;border-radius:9999px;border:0;box-shadow:0 10px 34px rgba(10,6,3,.55);}}
   .tp{{display:flex;align-items:center;gap:{max(10, int(tp_star_h * 0.5))}px;}}
-  .tp .stars{{font-size:{tp_star_h}px;color:#00b67a;letter-spacing:.18em;line-height:1;text-shadow:0 0 6px rgba(0,182,122,.85),0 0 14px rgba(0,182,122,.55),0 2px 8px rgba(2,6,20,.55);}}
-  .tp .word{{font-family:'Inter',sans-serif;font-weight:500;font-size:{max(12, int(tp_text * 1.0))}px;color:rgba(240,246,253,.92);}}
+  .tp .stars{{font-size:{tp_star_h}px;color:#00b67a;letter-spacing:.18em;line-height:1;text-shadow:0 2px 8px rgba(10,6,3,.6);}}
+  .tp .word{{font-family:'Inter',sans-serif;font-weight:500;font-size:{max(12, int(tp_text * 1.0))}px;color:rgba(247,242,233,.92);}}
 </style></head><body>
 <div class="canvas">
   <img class="photo" src="../{photo}" alt="">
   <div class="vignette"></div>
   <div class="grain"></div>
 
-  <div class="brand"><img src="../assets/lla_logo.png" alt="Longevity Life Academy by eTeacher Group">{eyebrow_html}</div>
+  <div class="brand"><img src="../assets/lla_logo_ivory.png" alt="Longevity Life Academy by eTeacher Group">{eyebrow_html}</div>
 
   <div class="text">
     <h1 class="h1">{l1}<span class="b">{l2}</span></h1>
