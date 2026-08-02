@@ -42,21 +42,21 @@ BANNERS = [
 
 SIZES = {
     '1x1':   dict(w=1080, h=1080, label='1:1 Feed',     note='Instagram Post / FB Feed Square',
-                  pad=64, logo=580, h1=112, cred=28, cta=21, ctap='20px 40px',
+                  pad=64, padb=110, logo=580, h1=112, cred=28,
                   tpi=26, tps=22, eyeb=22, mk=8, ltn=20, ltr=16,
-                  ltpos='right:64px;bottom:190px;', plate=PLATE_SQ, op='70% 24%'),
+                  ltpos='right:64px;bottom:230px;', plate=PLATE_SQ, op='70% 24%'),
     '4x5':   dict(w=1080, h=1350, label='4:5 Vertical', note='Instagram / FB Feed Vertical',
-                  pad=68, logo=600, h1=120, cred=29, cta=22, ctap='21px 42px',
+                  pad=68, padb=135, logo=600, h1=120, cred=29,
                   tpi=27, tps=23, eyeb=23, mk=8, ltn=21, ltr=16,
-                  ltpos='right:68px;bottom:215px;', plate=PLATE_45, op='68% 16%'),
+                  ltpos='right:68px;bottom:260px;', plate=PLATE_45, op='68% 16%'),
     '9x16':  dict(w=1080, h=1920, label='9:16 Story',   note='IG Stories, Reels, FB Stories',
-                  pad=72, logo=620, h1=126, cred=30, cta=23, ctap='22px 44px',
+                  pad=72, padb=270, logo=620, h1=126, cred=30,
                   tpi=28, tps=24, eyeb=24, mk=9, ltn=22, ltr=17,
-                  ltpos='right:72px;top:940px;', plate=PLATE_PT, op='50% 20%'),
+                  ltpos='right:72px;top:1420px;', plate=PLATE_PT, op='50% 20%'),
     '191x1': dict(w=1200, h=628,  label='1.91:1 Link',  note='FB Link Ad / Marketplace',
-                  pad=44, logo=320, h1=68,  cred=18, cta=15, ctap='13px 28px',
+                  pad=44, padb=64,  logo=320, h1=68,  cred=18,
                   tpi=18, tps=15, eyeb=16, mk=6, ltn=15, ltr=12,
-                  ltpos='right:44px;bottom:120px;', plate=PLATE_LS, op='60% 28%'),
+                  ltpos='right:44px;bottom:135px;', plate=PLATE_LS, op='60% 28%'),
 }
 
 
@@ -78,7 +78,7 @@ html,body{{width:{c['w']}px;height:{c['h']}px;overflow:hidden;background:#0a1020
   background:linear-gradient(to top,rgba(6,10,20,.96) 0%,rgba(6,10,20,.88) 35%,rgba(6,10,20,.55) 68%,rgba(6,10,20,0) 100%);}}
 .scrim-t{{position:absolute;left:0;right:0;top:0;height:26%;
   background:linear-gradient(to bottom,rgba(6,10,20,.80) 0%,rgba(6,10,20,.35) 55%,rgba(6,10,20,0) 100%);}}
-.content{{position:absolute;left:{c['pad']}px;right:{c['pad']}px;bottom:{c['pad']}px;}}
+.content{{position:absolute;left:{c['pad']}px;right:{c['pad']}px;bottom:{c['padb']}px;}}
 .logo{{width:{c['logo']}px;margin-bottom:{int(c['h1'] * 0.26)}px;}}
 .logo img{{width:100%;display:block;}}
 .eyebrow{{font-family:'Inter',sans-serif;font-weight:500;color:rgba(255,255,255,.82);
@@ -103,9 +103,7 @@ h1 .it{{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
 .cdot{{width:{int(c['cred'] * 0.4)}px;height:{int(c['cred'] * 0.4)}px;border-radius:50%;flex:none;
   align-self:center;background:#2ee08a;
   box-shadow:0 0 {int(c['cred'] * 0.55)}px rgba(46,224,138,.85),0 0 {int(c['cred'] * 1.1)}px rgba(46,224,138,.4);}}
-.row{{display:flex;align-items:center;gap:26px;margin-top:{int(c['cred'] * 1.3)}px;flex-wrap:nowrap;}}
-.cta{{font-family:'Inter',sans-serif;font-weight:600;color:{INK};background:#f2f6fc;
-  font-size:{c['cta']}px;letter-spacing:.10em;padding:{c['ctap']};border-radius:8px;white-space:nowrap;}}
+.row{{display:flex;align-items:center;gap:22px;margin-top:{int(c['cred'] * 1.5)}px;flex-wrap:nowrap;}}
 .tp{{display:flex;align-items:center;gap:12px;}}
 .tp img{{height:{c['tpi']}px;display:block;}}
 .tp span{{font-family:'Inter',sans-serif;color:rgba(255,255,255,.88);font-size:{c['tps']}px;white-space:nowrap;}}
@@ -137,7 +135,6 @@ h1 .it{{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
       <div class="st"><div class="sl">SMALL GROUPS</div><div class="sv">8&#8211;15</div></div>
     </div>
     <div class="row">
-      <div class="cta">ENROLL NOW</div>
       <div class="tp"><img src="../assets/tp_stars-5.svg"><span>4.6 on Trustpilot</span></div>
     </div>
   </div>
