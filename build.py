@@ -95,14 +95,11 @@ h1 .it{{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
   text-shadow:0 1px 12px rgba(0,0,0,.55);}}
 .fact .fn{{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
   color:{BLUE};font-size:{int(c['cred'] * 0.95)}px;letter-spacing:.08em;flex:none;min-width:{int(c['cred'] * 1.35)}px;}}
-.fact.fcta{{align-items:center;margin-top:{int(c['cred'] * 0.3)}px;}}
-.chip{{display:inline-flex;align-items:center;gap:{int(c['cred'] * 0.55)}px;
-  padding:{int(c['cred'] * 0.52)}px {int(c['cred'] * 0.85)}px;border-radius:{int(c['cred'] * 0.55)}px;
-  background:linear-gradient(135deg,rgba(93,146,221,.20),rgba(93,146,221,.06));
-  border:1px solid rgba(156,194,238,.45);box-shadow:0 0 26px rgba(93,146,221,.30);
-  font-family:'Inter',sans-serif;font-weight:500;color:#e9f2fd;font-size:{c['cred']}px;}}
-.cdot{{width:{int(c['cred'] * 0.34)}px;height:{int(c['cred'] * 0.34)}px;border-radius:50%;flex:none;
-  background:#5d92dd;box-shadow:0 0 12px rgba(93,146,221,.9);}}
+.fact.fcta{{align-items:baseline;}}
+.chip{{display:inline-flex;align-items:baseline;gap:{int(c['cred'] * 0.5)}px;}}
+.cdot{{width:{int(c['cred'] * 0.4)}px;height:{int(c['cred'] * 0.4)}px;border-radius:50%;flex:none;
+  align-self:center;background:#2ee08a;
+  box-shadow:0 0 {int(c['cred'] * 0.55)}px rgba(46,224,138,.85),0 0 {int(c['cred'] * 1.1)}px rgba(46,224,138,.4);}}
 .row{{display:flex;align-items:center;gap:26px;margin-top:{int(c['cred'] * 1.3)}px;flex-wrap:nowrap;}}
 .cta{{font-family:'Inter',sans-serif;font-weight:600;color:{INK};background:#f2f6fc;
   font-size:{c['cta']}px;letter-spacing:.10em;padding:{c['ctap']};border-radius:8px;white-space:nowrap;}}
