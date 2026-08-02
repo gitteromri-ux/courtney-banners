@@ -13,38 +13,54 @@ html,body{width:1080px;height:1350px;overflow:hidden;background:#0a1020;}
   background:linear-gradient(to top,rgba(6,10,20,.96) 0%,rgba(6,10,20,.88) 35%,rgba(6,10,20,.55) 68%,rgba(6,10,20,0) 100%);}
 .scrim-t{position:absolute;left:0;right:0;top:0;height:26%;
   background:linear-gradient(to bottom,rgba(6,10,20,.80) 0%,rgba(6,10,20,.35) 55%,rgba(6,10,20,0) 100%);}
-.logo{position:absolute;top:68px;left:68px;width:260px;}
+.logo{position:absolute;top:68px;left:68px;width:440px;}
 .logo img{width:100%;display:block;}
 .eyebrow{font-family:'Inter',sans-serif;font-weight:500;color:rgba(255,255,255,.82);
-  font-size:23px;margin-top:18px;letter-spacing:.02em;white-space:nowrap;}
+  font-size:23px;margin-top:20px;letter-spacing:.02em;white-space:nowrap;}
 .content{position:absolute;left:68px;right:68px;bottom:68px;}
 h1{font-family:'Playfair',serif;font-weight:700;color:#fff;
   font-size:106px;line-height:1.04;letter-spacing:-.015em;}
 h1 span{display:block;white-space:nowrap;}
 h1 .it{font-family:'PlayfairIt',serif;font-style:italic;font-weight:600;
-  color:#d8c39a;}
-.sub{font-family:'Inter',sans-serif;font-weight:400;color:rgba(255,255,255,.86);
-  font-size:28px;line-height:1.35;margin-top:22px;max-width:88%;}
-.cred{font-family:'Inter',sans-serif;margin-top:22px;}
-.cred div{color:#d8c39a;font-size:24px;line-height:1.45;font-weight:500;letter-spacing:.01em;}
-.row{display:flex;align-items:center;gap:26px;margin-top:35px;flex-wrap:nowrap;}
-.cta{font-family:'Inter',sans-serif;font-weight:600;color:#0a1020;background:#e8d9b5;
-  font-size:22px;letter-spacing:.10em;padding:21px 42px;border-radius:999px;white-space:nowrap;}
+  color:#9cc2ee;}
+.facts{display:inline-block;margin-top:27px;
+  border-left:3px solid #5d92dd;
+  background:linear-gradient(90deg,rgba(45,82,148,.30),rgba(45,82,148,0) 88%);
+  padding:8px 40px 8px 23px;}
+.fact{display:flex;align-items:center;gap:15px;
+  font-family:'Inter',sans-serif;font-weight:500;color:#eef4fd;
+  font-size:25px;line-height:1;padding:13px 0;}
+.fact + .fact{border-top:1px solid rgba(150,180,230,.28);}
+.fact .m{width:8px;height:8px;background:#5d92dd;transform:rotate(45deg);flex:none;}
+.row{display:flex;align-items:center;gap:26px;margin-top:32px;flex-wrap:nowrap;}
+.cta{font-family:'Inter',sans-serif;font-weight:600;color:#0a1428;background:#f2f6fc;
+  font-size:22px;letter-spacing:.10em;padding:21px 42px;border-radius:8px;white-space:nowrap;}
 .tp{display:flex;align-items:center;gap:12px;}
 .tp img{height:27px;display:block;}
 .tp span{font-family:'Inter',sans-serif;color:rgba(255,255,255,.88);font-size:23px;white-space:nowrap;}
+.lt{position:absolute;right:68px;bottom:210px;display:flex;}
+.lt .bar{width:4px;background:#5d92dd;flex:none;}
+.lt .tx{background:linear-gradient(90deg,rgba(8,14,28,.74),rgba(8,14,28,.38));
+  padding:13px 27px 15px 20px;}
+.lt .n{font-family:'Inter',sans-serif;font-weight:600;color:#fff;
+  font-size:25px;letter-spacing:.01em;white-space:nowrap;}
+.lt .r{font-family:'Inter',sans-serif;font-weight:400;color:#9cc2ee;
+  font-size:20px;margin-top:7px;letter-spacing:.03em;white-space:nowrap;}
 </style></head><body>
 <div class="stage">
   <img class="bg" src="../assets/composites/courtney_realset_45.png">
   <div class="scrim-t"></div><div class="scrim-s"></div><div class="scrim-b"></div>
-  <div class="logo"><img src="../assets/lla_logo.png"><div class="eyebrow">Live Online Longevity Course</div></div>
+  <div class="logo"><img src="../assets/lla_logo_oneline.png"><div class="eyebrow">Live Online Longevity Course</div></div>
+  <div class="lt"><div class="bar"></div><div class="tx">
+    <div class="n">Taught live by Courtney</div>
+    <div class="r">Longevity Life Academy Instructor</div>
+  </div></div>
   <div class="content">
     <h1><span class="l1">The Longevity Course,</span><span class="it">Taught Live.</span></h1>
-    <div class="sub">Taught live by Courtney, Longevity Life Academy Instructor</div>
-    <div class="cred">
-      <div>18 live sessions. Cohorts of 8-15.</div>
-      <div>The Six Pillars of longevity.</div>
-      <div>Your written longevity protocol.</div>
+    <div class="facts">
+      <div class="fact"><span class="m"></span>18 live sessions. Cohorts of 8-15.</div>
+      <div class="fact"><span class="m"></span>The Six Pillars of longevity.</div>
+      <div class="fact"><span class="m"></span>Your written longevity protocol.</div>
     </div>
     <div class="row">
       <div class="cta">ENROLL NOW</div>
