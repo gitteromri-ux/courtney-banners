@@ -76,7 +76,7 @@
     <div><div class="k">6</div><div class="v">Headlines</div></div>
     <div><div class="k">4</div><div class="v">Aspect Ratios</div></div>
     <div><div class="k">24</div><div class="v">Meta / IG Renders</div></div>
-    <div><div class="k"><em>V24</em></div><div class="v">Green Live Dot · No Box</div></div>
+    <div><div class="k"><em>V25</em></div><div class="v">Website Stat Layout · Refined Lower Thirds</div></div>
   </div>
 </header>
 
@@ -108,7 +108,7 @@ MANIFEST.forEach((b, i) => {
   SIZES.forEach(sz => {
     const cell = document.createElement('div');
     cell.className = 'cell a'+sz.k;
-    cell.innerHTML = `<div class="frame"><img src="banners/${b.id}_${sz.k}.png?r=24" alt="${b.title} ${sz.label}" loading="lazy"></div><div class="foot"><div><div class="label">${sz.label}</div><div class="note">${sz.note}</div></div><div class="links"><a href="banners/${b.id}_${sz.k}.png?r=24" download target="_blank">PNG</a><a href="banners/${b.id}_${sz.k}.html" target="_blank">HTML</a></div></div>`;
+    cell.innerHTML = `<div class="frame"><img src="banners/${b.id}_${sz.k}.png?r=25" alt="${b.title} ${sz.label}" loading="lazy"></div><div class="foot"><div><div class="label">${sz.label}</div><div class="note">${sz.note}</div></div><div class="links"><a href="banners/${b.id}_${sz.k}.png?r=25" download target="_blank">PNG</a><a href="banners/${b.id}_${sz.k}.html" target="_blank">HTML</a></div></div>`;
     grid.appendChild(cell);
   });
   g.appendChild(s);
