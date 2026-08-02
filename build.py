@@ -44,19 +44,19 @@ SIZES = {
     '1x1':   dict(w=1080, h=1080, label='1:1 Feed',     note='Instagram Post / FB Feed Square',
                   pad=64, padb=110, logo=580, h1=112, cred=28,
                   tpi=26, tps=22, eyeb=22, mk=8, ltn=20, ltr=16,
-                  ltpos='right:64px;bottom:230px;', plate=PLATE_SQ, op='70% 24%'),
+                  ltpos='right:380px;top:170px;', plate=PLATE_SQ, op='70% 24%'),
     '4x5':   dict(w=1080, h=1350, label='4:5 Vertical', note='Instagram / FB Feed Vertical',
                   pad=68, padb=135, logo=600, h1=120, cred=29,
                   tpi=27, tps=23, eyeb=23, mk=8, ltn=21, ltr=16,
-                  ltpos='right:68px;bottom:260px;', plate=PLATE_45, op='68% 16%'),
+                  ltpos='right:560px;top:210px;', plate=PLATE_45, op='68% 16%'),
     '9x16':  dict(w=1080, h=1920, label='9:16 Story',   note='IG Stories, Reels, FB Stories',
                   pad=72, padb=270, logo=620, h1=126, cred=30,
                   tpi=28, tps=24, eyeb=24, mk=9, ltn=22, ltr=17,
-                  ltpos='right:72px;top:1420px;', plate=PLATE_PT, op='50% 20%'),
+                  ltpos='right:72px;top:360px;', plate=PLATE_PT, op='50% 20%'),
     '191x1': dict(w=1200, h=628,  label='1.91:1 Link',  note='FB Link Ad / Marketplace',
                   pad=44, padb=64,  logo=320, h1=68,  cred=18, horiz=True,
                   tpi=18, tps=15, eyeb=16, mk=6, ltn=15, ltr=12,
-                  ltpos='right:44px;bottom:135px;', plate=PLATE_LS, op='60% 28%'),
+                  ltpos='right:410px;top:95px;', plate=PLATE_LS, op='60% 28%'),
 }
 
 
